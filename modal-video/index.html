@@ -5,66 +5,121 @@
     <meta charset="utf-8">
     <title>Modal Video</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 
-<body class="min-h-screen flex justify-center items-center p-6">
+<body class="font-inter antialiased h-screen flex flex-col justify-between before:h-6 px-6 py-6 md:py-8">
 
-    <div class="[&_[x-cloak]]:hidden" x-data="{ modalOpen: false }">
+    <main class="my-6">
+        <div class="w-full max-w-6xl mx-auto">
+            <div class="flex justify-center">
 
-        <!-- Video thumbnail -->
-        <button class="relative flex justify-center items-center focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group" @click="modalOpen = true" aria-controls="modal" aria-label="Watch the video">
-            <img class="rounded-3xl shadow-2xl transition-shadow duration-300 ease-in-out" src="./modal-video-thumb.jpg" width="768" height="432" alt="Modal video thumbnail" />
-            <!-- Play icon -->
-            <svg class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
-                <circle class="fill-white" cx="36" cy="36" r="36" fill-opacity=".8" />
-                <path class="fill-indigo-500 drop-shadow-2xl" d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z" />
-            </svg>
-        </button>
-        <!-- End: Video thumbnail -->
-    
-        <!-- Modal backdrop -->
-        <div
-            class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
-            x-show="modalOpen"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0"
-            x-transition:enter-end="opacity-100"
-            x-transition:leave="transition ease-out duration-100"
-            x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0" 
-            aria-hidden="true"
-            x-cloak
-        ></div>
-        <!-- End: Modal backdrop -->
-    
-        <!-- Modal dialog -->
-        <div
-            id="modal"
-            class="fixed inset-0 z-[99999] flex p-6"
-            role="dialog"
-            aria-modal="true"
-            x-show="modalOpen"
-            x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0 scale-75"
-            x-transition:enter-end="opacity-100 scale-100"
-            x-transition:leave="transition ease-out duration-200"
-            x-transition:leave-start="opacity-100 scale-100"
-            x-transition:leave-end="opacity-0 scale-75"
-            x-cloak
-        >
-            <div class="max-w-5xl mx-auto h-full flex items-center">
-                <div class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden" @click.outside="modalOpen = false" @keydown.escape.window="modalOpen = false">
-                    <video x-init="$watch('modalOpen', value => value ? $el.play() : $el.pause())" width="1920" height="1080" loop controls>
-                        <source src="./video.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+                <!-- Modal video component -->
+                <div class="[&_[x-cloak]]:hidden" x-data="{ modalOpen: false }">
+            
+                    <!-- Video thumbnail -->
+                    <button class="relative flex justify-center items-center focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 rounded-3xl group" @click="modalOpen = true" aria-controls="modal" aria-label="Watch the video">
+                        <img class="rounded-3xl shadow-2xl transition-shadow duration-300 ease-in-out" src="./modal-video-thumb.jpg" width="768" height="432" alt="Modal video thumbnail" />
+                        <!-- Play icon -->
+                        <svg class="absolute pointer-events-none group-hover:scale-110 transition-transform duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="72" height="72">
+                            <circle class="fill-white" cx="36" cy="36" r="36" fill-opacity=".8" />
+                            <path class="fill-indigo-500 drop-shadow-2xl" d="M44 36a.999.999 0 0 0-.427-.82l-10-7A1 1 0 0 0 32 29V43a.999.999 0 0 0 1.573.82l10-7A.995.995 0 0 0 44 36V36c0 .001 0 .001 0 0Z" />
+                        </svg>
+                    </button>
+                    <!-- End: Video thumbnail -->
+                
+                    <!-- Modal backdrop -->
+                    <div
+                        class="fixed inset-0 z-[99999] bg-black bg-opacity-50 transition-opacity"
+                        x-show="modalOpen"
+                        x-transition:enter="transition ease-out duration-200"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-out duration-100"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0" 
+                        aria-hidden="true"
+                        x-cloak
+                    ></div>
+                    <!-- End: Modal backdrop -->
+                
+                    <!-- Modal dialog -->
+                    <div
+                        id="modal"
+                        class="fixed inset-0 z-[99999] flex p-6"
+                        role="dialog"
+                        aria-modal="true"
+                        x-show="modalOpen"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 scale-75"
+                        x-transition:enter-end="opacity-100 scale-100"
+                        x-transition:leave="transition ease-out duration-200"
+                        x-transition:leave-start="opacity-100 scale-100"
+                        x-transition:leave-end="opacity-0 scale-75"
+                        x-cloak
+                    >
+                        <div class="max-w-5xl mx-auto h-full flex items-center">
+                            <div class="w-full max-h-full rounded-3xl shadow-2xl aspect-video bg-black overflow-hidden" @click.outside="modalOpen = false" @keydown.escape.window="modalOpen = false">
+                                <video x-init="$watch('modalOpen', value => value ? $el.play() : $el.pause())" width="1920" height="1080" loop controls>
+                                    <source src="./video.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: Modal dialog -->
+                
                 </div>
+                <!-- End: Modal video component -->
+
             </div>
         </div>
-        <!-- End: Modal dialog -->
-    
+    </main>
+
+    <!-- Page footer -->
+    <footer class="h-6">
+        <div class="w-full max-w-6xl mx-auto">
+            <a class="text-xs text-slate-500 hover:text-slate-800 transition-colors duration-150" href="https://cruip.com">&copy;Cruip - Tailwind CSS templates</a>
+        </div>
+    </footer>
+
+    <!-- Banner with links -->
+    <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-60" :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+        <div class="bg-slate-800 text-sm p-3 md:rounded shadow flex justify-between">
+            <div class="text-slate-500 inline-flex">
+                <a class="font-medium hover:underline text-slate-300" href="https://cruip.com/how-to-build-a-modal-video-with-html-tailwind-css-and-alpine-js/">
+                    Read Tutorial
+                </a>
+                <span class="italic px-1.5">or</span>
+                <a class="font-medium hover:underline text-indigo-500 flex items-center" href="https://github.com/cruip/cruip-tutorials/blob/main/modal-video/index.html" target="_blank" rel="noreferrer">
+                    <span>Download</span>
+                    <svg class="fill-indigo-400 ml-1" xmlns="http://www.w3.org/2000/svg" width="9" height="9">
+                        <path d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-gray-700" @click="bannerOpen = false">
+                <span class="sr-only">Close</span>
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                    <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                </svg>
+            </button>
+        </div>
     </div>
 
 </body>
