@@ -32,16 +32,16 @@
                 <div class="flex justify-center">
     
                     <!-- Pricing table component -->
-                    <div x-data="{ yearly: true }">
+                    <div x-data="{ isAnnual: true }">
                     
                         <!-- Pricing toggle -->
                         <div class="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-16">
                             <div class="relative flex w-full p-1 bg-white dark:bg-slate-900 rounded-full">
                                 <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
-                                    <span class="absolute inset-0 w-1/2 bg-indigo-500 rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out" :class="yearly ? 'translate-x-0' : 'translate-x-full'"></span>
+                                    <span class="absolute inset-0 w-1/2 bg-indigo-500 rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out" :class="isAnnual ? 'translate-x-0' : 'translate-x-full'"></span>
                                 </span>
-                                <button class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out" :class="yearly ? 'text-white' : 'text-slate-500 dark:text-slate-400'" @click="yearly = true">Yearly <span :class="yearly ? 'text-indigo-200' : 'text-slate-400 dark:text-slate-500'">-20%</span></button>
-                                <button class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out" :class="yearly ? 'text-slate-500 dark:text-slate-400' : 'text-white'" @click="yearly = false">Monthly</button>
+                                <button class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out" :class="isAnnual ? 'text-white' : 'text-slate-500 dark:text-slate-400'" @click="isAnnual = true">Yearly <span :class="yearly ? 'text-indigo-200' : 'text-slate-400 dark:text-slate-500'">-20%</span></button>
+                                <button class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out" :class="isAnnual ? 'text-slate-500 dark:text-slate-400' : 'text-white'" @click="isAnnual = false">Monthly</button>
                             </div>
                         </div>
                     
@@ -54,7 +54,7 @@
                                         <div class="text-slate-900 dark:text-slate-200 font-semibold mb-1">Essential</div>
                                         <div class="inline-flex items-baseline mb-2">
                                             <span class="text-slate-900 dark:text-slate-200 font-bold text-3xl">$</span>
-                                            <span class="text-slate-900 dark:text-slate-200 font-bold text-4xl" x-text="yearly ? '29' : '35'"></span>
+                                            <span class="text-slate-900 dark:text-slate-200 font-bold text-4xl" x-text="isAnnual ? '29' : '35'"></span>
                                             <span class="text-slate-500 font-medium">/mo</span>
                                         </div>
                                         <div class="text-sm text-slate-500 mb-5">There are many variations available, but the majority have suffered.</div>
@@ -102,7 +102,7 @@
                                         <div class="text-slate-900 dark:text-slate-200 font-semibold mb-1">Perform</div>
                                         <div class="inline-flex items-baseline mb-2">
                                             <span class="text-slate-900 dark:text-slate-200 font-bold text-3xl">$</span>
-                                            <span class="text-slate-900 dark:text-slate-200 font-bold text-4xl" x-text="yearly ? '49' : '55'"></span>
+                                            <span class="text-slate-900 dark:text-slate-200 font-bold text-4xl" x-text="isAnnual ? '49' : '55'"></span>
                                             <span class="text-slate-500 font-medium">/mo</span>
                                         </div>
                                         <div class="text-sm text-slate-500 mb-5">There are many variations available, but the majority have suffered.</div>
@@ -153,7 +153,7 @@
                                         <div class="text-slate-900 dark:text-slate-200 font-semibold mb-1">Enterprise</div>
                                         <div class="inline-flex items-baseline mb-2">
                                             <span class="text-slate-900 dark:text-slate-200 font-bold text-3xl">$</span>
-                                            <span class="text-slate-900 dark:text-slate-200 font-bold text-4xl" x-text="yearly ? '79' : '85'"></span>
+                                            <span class="text-slate-900 dark:text-slate-200 font-bold text-4xl" x-text="isAnnual ? '79' : '85'"></span>
                                             <span class="text-slate-500 font-medium">/mo</span>
                                         </div>
                                         <div class="text-sm text-slate-500 mb-5">There are many variations available, but the majority have suffered.</div>
