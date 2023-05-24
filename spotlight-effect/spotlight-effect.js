@@ -1,8 +1,8 @@
-// Box spotlight
+// Cards spotlight
 class Spotlight {
   constructor(containerElement) {
     this.container = containerElement;
-    this.boxes = Array.from(this.container.children);
+    this.cards = Array.from(this.container.children);
     this.mouse = {
       x: 0,
       y: 0,
@@ -31,11 +31,11 @@ class Spotlight {
     if (inside) {
       this.mouse.x = x;
       this.mouse.y = y;
-      this.boxes.forEach((box) => {
-        const boxX = -(box.getBoundingClientRect().left - rect.left) + this.mouse.x;
-        const boxY = -(box.getBoundingClientRect().top - rect.top) + this.mouse.y;
-        box.style.setProperty('--mouse-x', `${boxX}px`);
-        box.style.setProperty('--mouse-y', `${boxY}px`);
+      this.cards.forEach((card) => {
+        const cardX = -(card.getBoundingClientRect().left - rect.left) + this.mouse.x;
+        const cardY = -(card.getBoundingClientRect().top - rect.top) + this.mouse.y;
+        card.style.setProperty('--mouse-x', `${cardX}px`);
+        card.style.setProperty('--mouse-y', `${cardY}px`);
       });
     }
   }
