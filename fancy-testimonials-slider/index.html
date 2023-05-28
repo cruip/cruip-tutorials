@@ -36,7 +36,7 @@
                         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[480px] pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-b before:from-indigo-500/25 before:via-indigo-500/5 before:via-25% before:to-indigo-500/0 before:to-75% before:rounded-full before:-z-10">
                             <div class="h-32 [mask-image:_linear-gradient(0deg,transparent,theme(colors.white)_20%,theme(colors.white))]">
                                 <!-- Alpine.js template for testimonial images: https://github.com/alpinejs/alpine#x-for -->
-                                <template x-for="(item, index) in testimonials" :key="index">
+                                <template x-for="(testimonial, index) in testimonials" :key="index">
                                     <div
                                         x-show="active === index"
                                         class="absolute inset-0 -z-10"
@@ -47,7 +47,7 @@
                                         x-transition:leave-start="opacity-100 rotate-0"
                                         x-transition:leave-end="opacity-0 rotate-[60deg]"
                                     >
-                                        <img class="relative top-11 left-1/2 -translate-x-1/2 rounded-full" :src="item.img" width="56" height="56" :alt="item.name">
+                                        <img class="relative top-11 left-1/2 -translate-x-1/2 rounded-full" :src="testimonial.img" width="56" height="56" :alt="testimonial.name">
                                     </div>
                                 </template>
                             </div>
