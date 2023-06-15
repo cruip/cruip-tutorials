@@ -11,3 +11,4 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [How to Create a Beautiful Particle Animation with HTML Canvas](https://cruip.com/how-to-create-a-beautiful-particle-animation-with-html-canvas/)
 - [How to Create a Spotlight Card Hover Effect with Tailwind CSS](https://cruip.com/how-to-create-a-spotlight-card-hover-effect-with-tailwind-css/)
 - [How to Build a Fancy Testimonial Slider with Tailwind CSS and Alpine.js](https://cruip.com/how-to-build-a-fancy-testimonial-slider-with-tailwind-css-and-alpine-js/)
+- [3 Examples of Brilliant Vertical Timelines with Tailwind CSS](https://cruip.com/3-examples-of-brilliant-vertical-timelines-with-tailwind-css/)
