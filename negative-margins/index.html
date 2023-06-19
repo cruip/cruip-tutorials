@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Negative Margins</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="relative font-inter antialiased">
+
+    <main class="relative min-h-screen flex flex-col justify-center bg-white overflow-hidden">
+        <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+            <div class="flex justify-center">
+
+                <article class="max-w-[40rem] mx-auto">
+                    <header class="mb-4">
+                        <h1 class="text-4xl font-extrabold text-slate-900">How I Became Who I Am Today</h1>
+                    </header>
+                    <div class="text-slate-600 [&>p]:my-6 [&>p:first-child]:mt-0 [&>p:last-child]:mb-0 [&_strong]:font-medium [&_strong]:text-slate-900 [&_a]:font-medium [&_a]:text-indigo-500 [&_a]:underline [&_a:hover]:no-underline [&_img]:rounded-xl [&_blockquote]:italic [&_blockquote]:before:block [&_blockquote]:before:w-[18px] [&_blockquote]:before:h-[17px] [&_blockquote]:before:bg-[url('./quotes.svg')] [&_blockquote]:before:bg-no-repeat [&_blockquote]:before:mb-2 [&_figcaption]:text-center [&_figcaption]:text-xs [&_figcaption]:italic [&_figcaption]:mt-3">
+                        <p>
+                            Once upon a time, in a bustling city, Alex lived and breathed software development. The world of coding fascinated me, and I was <strong>determined to leave my mark on it</strong>. With a passion for <a href="#0">innovation</a> and a desire to create, I embarked on a journey that would forever change my life.
+                        </p>
+                        <div class="space-y-6 sm:flex sm:items-center sm:space-x-8 sm:space-y-0 md:-ml-12">
+                            <figure class="shrink-0 sm:max-w-[270px]">
+                                <img class="object-cover h-[180px] sm:h-auto" width="640" height="426" src="./article-01.jpg" alt="Article 01" />
+                            </figure>
+                            <blockquote>
+                                <p>Looking back on my journey, I realized that becoming popular wasn't just about the numbers or the recognition—it was about the impact I had on others and the possibility of helping by sharing my personal and professional knowledge.</p>
+                            </blockquote>
+                        </div>
+                        <p>
+                            In the heart of a vibrant city, amidst the hustle and bustle, there I was, Alex, completely immersed in the world of software development. The realm of coding held an irresistible allure, captivating my every thought and action. Driven by a profound passion for innovation and an unwavering desire to make a lasting impact, I set forth on a transformative journey that would shape the course of my existence.
+                        </p>
+                        <div class="space-y-6 sm:flex sm:items-center sm:space-x-8 sm:space-y-0 md:-mr-12">
+                            <p>
+                                Today, as a successful software developer with two thriving startups under my belt, I continue to embrace new challenges and opportunities. But above all, I remain committed to <strong>sharing my knowledge</strong>, empowering others, and making a lasting impact on the world.
+                            </p>
+                            <figure class="shrink-0 sm:max-w-[270px]">
+                                <img class="object-cover h-[180px] sm:h-auto" width="640" height="426" src="./article-02.jpg" alt="Article 02" />
+                            </figure>
+                        </div>
+                        <p>
+                            Driven by unwavering determination, I took a leap of faith and founded my first startup. Days turned into nights as I <a href="#0">poured my heart</a> and soul into transforming my idea into reality. Failure was not an option. With relentless effort, sleepless nights, and an unwavering belief in my vision, I launched my product into the world.
+                        </p>
+                        <p>
+                            The sleepless nights spent debugging, the <strong>countless hours spent refining algorithms</strong> — all were stepping stones along my path of growth.
+                        </p>
+                        <figure class="md:-mx-12">
+                            <img class="object-cover h-[180px] sm:h-auto" width="736" height="240" src="./article-03.jpg" alt="Article 03" />
+                            <figcaption>Moments of tranquility amidst nature's beauty</figcaption>
+                        </figure>
+                        <p>
+                            As I delved deeper into the intricacies of programming, a whole new universe of possibilities unfurled before me. Lines of code danced across my screen like a symphony, each keystroke resonating with the potential to bring my visions to life. From the early days of tinkering with simple programs to the <a href="#0">ambitious projects</a> that followed, my thirst for knowledge and creative expression grew insatiable.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+    
+    <!-- Page footer -->
+    <footer class="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
+        <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com">&copy;Cruip - Tailwind CSS templates</a>
+    </footer>
+
+    <!-- Banner with links -->
+    <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50" :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+        <div class="bg-slate-800 text-sm p-3 md:rounded shadow flex justify-between">
+            <div class="text-slate-500 inline-flex">
+                <a class="font-medium hover:underline text-slate-300" href="https://cruip.com/creating-dynamic-blog-layouts-with-negative-margins/">
+                    Read Tutorial
+                </a>
+                <span class="italic px-1.5">or</span>
+                <a class="font-medium hover:underline text-indigo-500 flex items-center" href="https://github.com/cruip/cruip-tutorials/blob/main/negative-margin/index.html" target="_blank" rel="noreferrer">
+                    <span>Download</span>
+                    <svg class="fill-indigo-400 ml-1" xmlns="http://www.w3.org/2000/svg" width="9" height="9">
+                        <path d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-slate-700" @click="bannerOpen = false">
+                <span class="sr-only">Close</span>
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                    <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
