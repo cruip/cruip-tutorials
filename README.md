@@ -14,3 +14,4 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [3 Examples of Brilliant Vertical Timelines with Tailwind CSS](https://cruip.com/3-examples-of-brilliant-vertical-timelines-with-tailwind-css/)
 - [Creating Dynamic Blog Layouts with Negative Margins](https://cruip.com/creating-dynamic-blog-layouts-with-negative-margins/)
 - [Using Tailwind CSS and Alpine.js to Create Animated and Accessible Tabs](https://cruip.com/using-tailwind-css-and-alpine-js-to-create-animated-and-accessible-tabs/)
+- [How to Create a Feature Comparison Table with Tailwind CSS](https://cruip.com/how-to-create-a-feature-comparison-table-with-tailwind-css/)
