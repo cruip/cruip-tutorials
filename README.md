@@ -15,3 +15,4 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Creating Dynamic Blog Layouts with Negative Margins](https://cruip.com/creating-dynamic-blog-layouts-with-negative-margins/)
 - [Using Tailwind CSS and Alpine.js to Create Animated and Accessible Tabs](https://cruip.com/using-tailwind-css-and-alpine-js-to-create-animated-and-accessible-tabs/)
 - [How to Create a Feature Comparison Table with Tailwind CSS](https://cruip.com/how-to-create-a-feature-comparison-table-with-tailwind-css/)
+- [Building a Simple Animated Accordion Component with Tailwind CSS](https://cruip.com/building-a-simple-animated-accordion-component-with-tailwind-css/)
