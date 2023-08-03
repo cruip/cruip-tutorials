@@ -16,6 +16,8 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Using Tailwind CSS and Alpine.js to Create Animated and Accessible Tabs](https://cruip.com/using-tailwind-css-and-alpine-js-to-create-animated-and-accessible-tabs/)
 - [How to Create a Feature Comparison Table with Tailwind CSS](https://cruip.com/how-to-create-a-feature-comparison-table-with-tailwind-css/)
 - [Building a Simple Animated Accordion Component with Tailwind CSS](https://cruip.com/building-a-simple-animated-accordion-component-with-tailwind-css/)
+- [Creating a Sliding Text Animation with Tailwind CSS](https://cruip.com/creating-a-sliding-text-animation-with-tailwind-css/)
+- [Create an Infinite Horizontal Scroll Animation with Tailwind CSS](https://cruip.com/create-an-infinite-horizontal-scroll-animation-with-tailwind-css/)
 
 ## Terms of use
 
