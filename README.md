@@ -18,7 +18,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Building a Simple Animated Accordion Component with Tailwind CSS](https://cruip.com/building-a-simple-animated-accordion-component-with-tailwind-css/)
 - [Creating a Sliding Text Animation with Tailwind CSS](https://cruip.com/creating-a-sliding-text-animation-with-tailwind-css/)
 - [Create an Infinite Horizontal Scroll Animation with Tailwind CSS](https://cruip.com/create-an-infinite-horizontal-scroll-animation-with-tailwind-css/)
-- [Creating a CSS-only card slider with Tailwind CSS](https://cruip.com/creating-a-css-only-card-slider-with-tailwind-css/)
+- [Creating a CSS-only Card Slider with Tailwind CSS](https://cruip.com/creating-a-css-only-card-slider-with-tailwind-css/)
 
 ## Terms of use
 
