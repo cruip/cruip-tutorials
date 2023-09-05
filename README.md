@@ -19,6 +19,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Creating a Sliding Text Animation with Tailwind CSS](https://cruip.com/creating-a-sliding-text-animation-with-tailwind-css/)
 - [Create an Infinite Horizontal Scroll Animation with Tailwind CSS](https://cruip.com/create-an-infinite-horizontal-scroll-animation-with-tailwind-css/)
 - [Creating a CSS-only Card Slider with Tailwind CSS](https://cruip.com/creating-a-css-only-card-slider-with-tailwind-css/)
+- [Build a Hoverable Dropdown Menu with Tailwind CSS and Alpine.js](https://cruip.com/build-a-hoverable-dropdown-menu-with-tailwind-css-and-alpine-js)
 
 ## Terms of use
 
