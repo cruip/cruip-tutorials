@@ -21,6 +21,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Creating a CSS-only Card Slider with Tailwind CSS](https://cruip.com/creating-a-css-only-card-slider-with-tailwind-css/)
 - [Build a Hoverable Dropdown Menu with Tailwind CSS and Alpine.js](https://cruip.com/build-a-hoverable-dropdown-menu-with-tailwind-css-and-alpine-js)
 - [How to Make an Animated Number Counter with Tailwind CSS](https://cruip.com/how-to-make-an-animated-number-counter-with-tailwind-css)
+- [How to Create a Sticky On Scroll Effect with JavaScript](https://cruip.com/how-to-create-a-sticky-on-scroll-effect-with-javascript/)
 
 ## Terms of use
 
