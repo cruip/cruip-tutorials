@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cards Waterfall</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        nycd: ['Nothing You Could Do', 'cursive'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="relative font-inter antialiased">
+
+    <main class="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden supports-[overflow:clip]:overflow-clip">
+        <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+
+            <div class="h-[calc(100vh-6rem)] flex items-center justify-center text-4xl font-bold text-slate-300 text-center">
+                Scroll down
+            </div>
+
+            <!-- Cards Waterfall -->
+            <div class="max-w-5xl mx-auto">
+                <div class="relative z-0 space-y-14" x-data="{ entered: '0' }">
+                    <!-- Section #1 -->
+                    <section x-intersect.margin.-70%.0.-30%.0="entered = '0'" class="[--i:0]" :class="'[--e:'+entered+']'">
+                        <div class="relative bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[2]" :class="entered >= 0 ? 'translate-y-0' : '-translate-y-[calc(100%*(var(--i)-var(--e)))]'">
+                            <div class="md:flex justify-between items-center">
+                                <div class="shrink-0 px-12 py-14 max-md:pb-0 md:pr-0">
+                                    <div class="md:max-w-md">
+                                        <div class="font-nycd text-xl text-indigo-500 mb-2 relative inline-flex justify-center items-end">
+                                            Interesting
+                                            <svg class="absolute fill-indigo-500 opacity-40 -z-10" xmlns="http://www.w3.org/2000/svg" width="88" height="4" viewBox="0 0 88 4" aria-hidden="true" preserveAspectRatio="none">
+                                                <path d="M87.343 2.344S60.996 3.662 44.027 3.937C27.057 4.177.686 3.655.686 3.655c-.913-.032-.907-1.923-.028-1.999 0 0 26.346-1.32 43.315-1.593 16.97-.24 43.342.282 43.342.282.904.184.913 1.86.028 1.999" />
+                                            </svg>
+                                        </div>
+                                        <h1 class="text-4xl font-extrabold text-slate-50 mb-4">The modern way to find high-quality devs</h1>
+                                        <p class="text-slate-400 mb-6">We're the world's largest marketplace of quality developers for early-stage startups. Need a hand with development? Grab one of ours!</p>
+                                        <a class="text-sm font-medium inline-flex items-center justify-center px-3 py-1.5 border border-slate-700 rounded-lg tracking-normal transition text-slate-300 hover:text-slate-50 group" href="#0">
+                                            Learn More <span class="text-slate-600 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <img class="mx-auto max-md:-translate-x-[5%]" src="./illustration-01.png" width="519" height="490" alt="Illustration 01">
+                            </div>
+                            <div class="absolute left-12 bottom-0 h-14 flex items-center text-xs font-medium text-slate-400">01</div>
+                        </div>
+                    </section>
+                    <!-- Section #2 -->
+                    <section x-intersect.margin.-70%.0.-30%.0="entered = '1'" class="[--i:1]" :class="'[--e:'+entered+']'">
+                        <div class="relative bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[1]" :class="entered >= 1 ? 'translate-y-0' : '-translate-y-[calc(100%*(var(--i)-var(--e)))]'">
+                            <div class="md:flex justify-between items-center">
+                                <div class="shrink-0 px-12 py-14 max-md:pb-0 md:pr-0">
+                                    <div class="md:max-w-md">
+                                        <div class="font-nycd text-xl text-sky-500 mb-2 relative inline-flex justify-center items-end">
+                                            Engaging
+                                            <svg class="absolute fill-sky-500 opacity-40 -z-10" xmlns="http://www.w3.org/2000/svg" width="88" height="4" viewBox="0 0 88 4" aria-hidden="true" preserveAspectRatio="none">
+                                                <path d="M87.343 2.344S60.996 3.662 44.027 3.937C27.057 4.177.686 3.655.686 3.655c-.913-.032-.907-1.923-.028-1.999 0 0 26.346-1.32 43.315-1.593 16.97-.24 43.342.282 43.342.282.904.184.913 1.86.028 1.999" />
+                                            </svg>
+                                        </div>
+                                        <h1 class="text-4xl font-extrabold text-slate-50 mb-4">The modern way to find high-quality devs</h1>
+                                        <p class="text-slate-400 mb-6">We're the world's largest marketplace of quality developers for early-stage startups. Need a hand with development? Grab one of ours!</p>
+                                        <a class="text-sm font-medium inline-flex items-center justify-center px-3 py-1.5 border border-slate-700 rounded-lg tracking-normal transition text-slate-300 hover:text-slate-50 group" href="#0">
+                                            Learn More <span class="text-slate-600 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <img class="mx-auto max-md:-translate-x-[5%]" src="./illustration-02.png" width="519" height="490" alt="Illustration 02">
+                            </div>
+                            <div class="absolute left-12 bottom-0 h-14 flex items-center text-xs font-medium text-slate-400">02</div>
+                        </div>
+                    </section>
+                    <!-- Section #3 -->
+                    <section x-intersect.margin.-70%.0.-30%.0="entered = '2'" class="[--i:2]" :class="'[--e:'+entered+']'">
+                        <div class="relative bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-0" :class="entered >= 2 ? 'translate-y-0' : '-translate-y-[calc(100%*(var(--i)-var(--e)))]'">
+                            <div class="md:flex justify-between items-center">
+                                <div class="shrink-0 px-12 py-14 max-md:pb-0 md:pr-0">
+                                    <div class="md:max-w-md">
+                                        <div class="font-nycd text-xl text-teal-500 mb-2 relative inline-flex justify-center items-end">
+                                            Appealing
+                                            <svg class="absolute fill-teal-500 opacity-40 -z-10" xmlns="http://www.w3.org/2000/svg" width="88" height="4" viewBox="0 0 88 4" aria-hidden="true" preserveAspectRatio="none">
+                                                <path d="M87.343 2.344S60.996 3.662 44.027 3.937C27.057 4.177.686 3.655.686 3.655c-.913-.032-.907-1.923-.028-1.999 0 0 26.346-1.32 43.315-1.593 16.97-.24 43.342.282 43.342.282.904.184.913 1.86.028 1.999" />
+                                            </svg>
+                                        </div>
+                                        <h1 class="text-4xl font-extrabold text-slate-50 mb-4">The modern way to find high-quality devs</h1>
+                                        <p class="text-slate-400 mb-6">We're the world's largest marketplace of quality developers for early-stage startups. Need a hand with development? Grab one of ours!</p>
+                                        <a class="text-sm font-medium inline-flex items-center justify-center px-3 py-1.5 border border-slate-700 rounded-lg tracking-normal transition text-slate-300 hover:text-slate-50 group" href="#0">
+                                            Learn More <span class="text-slate-600 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <img class="mx-auto max-md:-translate-x-[5%]" src="./illustration-03.png" width="519" height="490" alt="Illustration 03">
+                            </div>
+                            <div class="absolute left-12 bottom-0 h-14 flex items-center text-xs font-medium text-slate-400">03</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- End: Cards Waterfall -->
+
+            <div class="h-[calc(100vh-6rem)] flex items-center justify-center text-4xl font-bold text-slate-300 text-center">
+                Scroll up
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Page footer -->
+    <footer class="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
+        <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com">&copy;Cruip - Tailwind CSS templates</a>
+    </footer>
+
+    <!-- Banner with links -->
+    <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50" :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+        <div class="bg-slate-800 text-sm p-3 md:rounded shadow flex justify-between">
+            <div class="text-slate-500 inline-flex">
+                <a class="font-medium hover:underline text-slate-300" href="https://cruip.com/how-to-create-a-sticky-on-scroll-effect-with-javascript/">
+                    Read Tutorial
+                </a>
+                <span class="italic px-1.5">or</span>
+                <a class="font-medium hover:underline text-indigo-500 flex items-center" href="https://github.com/cruip/cruip-tutorials/blob/main/sticky-scrolling/" target="_blank" rel="noreferrer">
+                    <span>Download</span>
+                    <svg class="fill-indigo-400 ml-1" xmlns="http://www.w3.org/2000/svg" width="9" height="9">
+                        <path d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-slate-700" @click="bannerOpen = false">
+                <span class="sr-only">Close</span>
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                    <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
