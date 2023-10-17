@@ -25,6 +25,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Create an Animated Gradient Text with Tailwind CSS](https://cruip.com/create-an-animated-gradient-text-with-tailwind-css/)
 - [How to Make a Stunning CTA Animation with Tailwind CSS](https://cruip.com/how-to-make-a-stunning-cta-animation-with-tailwind-css/)
 - [Create a Stacking Cards Waterfall Effect with Tailwind and Alpine.js](https://cruip.com/create-a-stacking-cards-waterfall-effect-with-tailwind-and-alpine-js/)
+- [Building an Expandable Header with Tailwind CSS and Alpine.js](https://cruip.com/building-an-expandable-header-with-tailwind-css-and-alpinejs/)
 
 ## Terms of use
 
