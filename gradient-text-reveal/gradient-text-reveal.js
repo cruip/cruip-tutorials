@@ -5,7 +5,7 @@ class TextReveal {
     this.child = this.element.firstElementChild;
     this.revealValue = 0;
     this.opacityValue = 0;
-    this.isRevealDoable = this.isRevealDoable.bind(this);
+    this.canReveal = this.canReveal.bind(this);
     this.getRects = this.getRects.bind(this);
     this.calculateRevealValue = this.calculateRevealValue.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
@@ -13,7 +13,7 @@ class TextReveal {
     this.init();
   }
 
-  isRevealDoable() {
+  canReveal() {
     const { childRect } = this.getRects();
     // Returns false if the child container is taller than the viewport.
     return childRect.height <= window.innerHeight;
@@ -29,7 +29,7 @@ class TextReveal {
   calculateRevealValue() {
     const { rect, childRect } = this.getRects();
 
-    if (!this.isRevealDoable()) return 1;
+    if (!this.canReveal()) return 1;
 
     // Calculate the intersection value based on the provided conditions
     if (rect.top <= childRect.top && rect.bottom >= childRect.top) {
@@ -65,7 +65,7 @@ class TextReveal {
   }
 
   setupReveal() {
-    if (this.isRevealDoable()) {
+    if (this.canReveal()) {
       this.handleScroll();
       window.addEventListener('scroll', this.handleScroll);
       // Remove the inline styles if previously set
