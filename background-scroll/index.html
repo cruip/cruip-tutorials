@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Background on Scroll</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="relative font-inter antialiased">
+
+    <main class="relative min-h-screen flex flex-col bg-sky-200 transition-colors duration-700 overflow-hidden" data-bg-scroll>
+        <div class="w-full max-w-5xl mx-auto px-4 md:px-6">
+
+            <!-- Background on scroll -->
+            <div class="pt-6 pb-12 md:pt-10 md:pb-20">
+                <!-- Sky section -->
+                <section data-bg-class="bg-sky-200">
+                    <div class="max-w-3xl mx-auto">
+                        <div class="py-6 md:py-10">
+                            <div class="max-w-sm mx-auto sm:max-w-none grid sm:grid-cols-2 gap-6">
+                                <article class="bg-white/50 rounded-2xl shadow shadow-sky-900/10 p-6">
+                                    <div class="space-y-10">
+                                        <div>
+                                            <div class="text-sky-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="1">
+                                                    <path d="M6.466 17.537c-.31-.308-.466-.74-.466-1.295 0-.324.045-.67.135-1.04.09-.37.204-.733.344-1.088.139-.354.282-.686.429-.994a20.435 20.435 0 0 1 .417-.833.269.269 0 0 1 .05-.07c.048-.092.118-.246.208-.462.09-.216.196-.474.319-.775l.417-1.017c.155-.378.323-.768.503-1.168.213-.51.434-1.026.663-1.55.229-.524.441-1.01.638-1.457.196-.447.364-.833.503-1.157.139-.324.233-.54.282-.647.098-.17.151-.282.16-.336a.903.903 0 0 0 .012-.127c.065-.247.147-.516.245-.81.098-.292.217-.566.356-.82.139-.255.303-.467.49-.637A.942.942 0 0 1 12.823 1c.18 0 .372.058.577.173.204.116.405.313.601.59l-.05-.07c0 .016-.08.251-.244.706-.164.455-.385 1.057-.663 1.804a686.082 686.082 0 0 1-2.074 5.494 530.456 530.456 0 0 1-2.171 5.562c-.311.779-.577 1.415-.798 1.908-.22.494-.364.771-.43.833a4.054 4.054 0 0 1-.576-.15c-.27-.085-.446-.19-.528-.313Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Enable automated appointment booking</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto" src="./illustration-01-a.png" width="324" height="168" alt="Illustration 1a">
+                                    </div>
+                                </article>
+                                <article class="bg-white/50 rounded-2xl shadow shadow-sky-900/10 p-6">
+                                    <div class="space-y-10">
+                                        <div>
+                                            <div class="text-sky-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="2">
+                                                    <path d="M2.532 17.41c-.202-.132-.342-.276-.418-.432A1.135 1.135 0 0 1 2 16.474c0-.213.042-.394.127-.542.084-.147.186-.303.304-.467.338-.41.689-.813 1.052-1.207.364-.393.723-.779 1.078-1.156A72.729 72.729 0 0 0 7.756 9.36a23.578 23.578 0 0 0 2.688-4.21c.169-.41.253-.705.253-.885 0-.148-.11-.222-.33-.222a2.8 2.8 0 0 0-.57.074c-.228.05-.465.115-.71.197-.245.082-.499.172-.76.27a12.69 12.69 0 0 0-.723.296c-.575.23-1.074.414-1.496.554-.423.14-.714.197-.875.172-.16-.024-.178-.16-.05-.406.126-.246.451-.632.975-1.157.27-.295.596-.566.977-.812a9.69 9.69 0 0 1 1.179-.653 6.449 6.449 0 0 1 1.23-.43A5.009 5.009 0 0 1 10.697 2c.693 0 1.277.168 1.75.505.473.336.71.882.71 1.637 0 .541-.178 1.214-.533 2.018-.44.935-.98 1.801-1.622 2.597a75.418 75.418 0 0 1-1.978 2.35c-.609.69-1.192 1.367-1.75 2.031a11.138 11.138 0 0 0-1.42 2.154c.423-.065.951-.197 1.585-.394a57.411 57.411 0 0 0 2.067-.689c.54-.197 1.094-.39 1.66-.578a31.5 31.5 0 0 1 1.661-.505c.541-.148 1.065-.267 1.572-.357.507-.09.98-.135 1.42-.135.49 0 .917.07 1.28.21.364.139.656.364.876.676.017.082.025.193.025.332 0 .14-.013.283-.038.431a4.26 4.26 0 0 1-.089.406.925.925 0 0 1-.101.259 5.81 5.81 0 0 0-1.42-.025c-.507.05-1.048.144-1.623.283-.575.14-1.166.312-1.775.517-.609.205-1.217.414-1.826.628a65.997 65.997 0 0 1-3.46 1.144c-1.125.337-2.143.505-3.056.505-.39 0-.761-.045-1.116-.135a2.727 2.727 0 0 1-.964-.456Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Protect your time and maximize your income</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto" src="./illustration-02-a.png" width="324" height="168" alt="Illustration 2a">
+                                    </div>
+                                </article>
+                                <article class="sm:col-span-2 bg-white/50 rounded-2xl shadow shadow-sky-900/10 px-6 py-16">
+                                    <div class="space-y-10 md:flex items-center justify-between md:space-y-0 md:space-x-8">
+                                        <div>
+                                            <div class="text-sky-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="3">
+                                                    <path d="M4.096 18.954c-.083-.031-.203-.116-.361-.256a1.853 1.853 0 0 1-.311-.324l.025.023a.27.27 0 0 0-.05-.07.27.27 0 0 1-.05-.07l.05.047a3.425 3.425 0 0 1-.274-.394.791.791 0 0 1-.125-.406c0-.131.05-.251.15-.36.1-.108.29-.2.573-.278.282-.077.577-.092.884-.046.307.046.619.108.935.185.215.031.431.07.647.116.216.047.416.062.598.047.316-.031.764-.155 1.346-.371a18.55 18.55 0 0 0 1.881-.835c.673-.34 1.358-.723 2.056-1.148a19.885 19.885 0 0 0 1.906-1.31c.573-.449 1.038-.89 1.395-1.323.357-.432.536-.827.536-1.182 0-.279-.233-.51-.698-.696l.1.046c-.349-.062-.839-.015-1.47.14-.631.154-1.296.324-1.993.51-.648.185-1.28.351-1.894.498-.615.147-1.138.22-1.57.22-.548 0-.95-.12-1.208-.359-.258-.24-.295-.684-.113-1.333a13.934 13.934 0 0 0 .673-.673H7.71a93.782 93.782 0 0 0 1.807-1.844 15.623 15.623 0 0 0 1.707-2.099c-.25.047-.52.1-.81.163-.29.061-.586.12-.885.174-.299.054-.59.096-.872.127-.282.031-.54.047-.772.047-.3 0-.565-.024-.798-.07-.232-.046-.402-.124-.51-.232-.108-.108-.15-.255-.125-.44.025-.186.137-.41.336-.673.067-.062.229-.17.486-.325.258-.155.573-.325.947-.51.374-.186.785-.375 1.233-.568.449-.194.902-.371 1.358-.534a14.01 14.01 0 0 1 1.346-.406c.44-.108.826-.162 1.159-.162.481 0 .868.1 1.158.302.291.2.436.525.436.974 0 .433-.203 1.024-.61 1.774s-1.092 1.712-2.056 2.887v.302h.847c.864 0 1.608.07 2.23.208.623.14 1.134.333 1.533.58.398.248.69.541.872.882.183.34.274.71.274 1.113 0 .526-.162 1.086-.486 1.681-.324.596-.772 1.187-1.345 1.774a13.757 13.757 0 0 1-2.056 1.705 16.163 16.163 0 0 1-2.604 1.45c-.938.417-1.93.75-2.977.997S6.422 19 5.342 19h-.635c-.208 0-.411-.015-.61-.046Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Control your availability and book more clients</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto max-md:-translate-x-6" src="./illustration-03.png" width="330" height="280" alt="Illustration 3">
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Purple section -->
+                <section data-bg-class="bg-purple-200">
+                    <div class="max-w-3xl mx-auto">
+                        <div class="py-6 md:py-10">
+                            <div class="max-w-sm mx-auto sm:max-w-none grid sm:grid-cols-2 gap-6">
+                                <article class="bg-white/50 rounded-2xl shadow shadow-purple-900/10 p-6">
+                                    <div class="space-y-10">
+                                        <div>
+                                            <div class="text-purple-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="1">
+                                                    <path d="M6.466 17.537c-.31-.308-.466-.74-.466-1.295 0-.324.045-.67.135-1.04.09-.37.204-.733.344-1.088.139-.354.282-.686.429-.994a20.435 20.435 0 0 1 .417-.833.269.269 0 0 1 .05-.07c.048-.092.118-.246.208-.462.09-.216.196-.474.319-.775l.417-1.017c.155-.378.323-.768.503-1.168.213-.51.434-1.026.663-1.55.229-.524.441-1.01.638-1.457.196-.447.364-.833.503-1.157.139-.324.233-.54.282-.647.098-.17.151-.282.16-.336a.903.903 0 0 0 .012-.127c.065-.247.147-.516.245-.81.098-.292.217-.566.356-.82.139-.255.303-.467.49-.637A.942.942 0 0 1 12.823 1c.18 0 .372.058.577.173.204.116.405.313.601.59l-.05-.07c0 .016-.08.251-.244.706-.164.455-.385 1.057-.663 1.804a686.082 686.082 0 0 1-2.074 5.494 530.456 530.456 0 0 1-2.171 5.562c-.311.779-.577 1.415-.798 1.908-.22.494-.364.771-.43.833a4.054 4.054 0 0 1-.576-.15c-.27-.085-.446-.19-.528-.313Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Enable automated appointment booking</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto" src="./illustration-01-b.png" width="324" height="168" alt="Illustration 1b">
+                                    </div>
+                                </article>
+                                <article class="bg-white/50 rounded-2xl shadow shadow-purple-900/10 p-6">
+                                    <div class="space-y-10">
+                                        <div>
+                                            <div class="text-purple-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="2">
+                                                    <path d="M2.532 17.41c-.202-.132-.342-.276-.418-.432A1.135 1.135 0 0 1 2 16.474c0-.213.042-.394.127-.542.084-.147.186-.303.304-.467.338-.41.689-.813 1.052-1.207.364-.393.723-.779 1.078-1.156A72.729 72.729 0 0 0 7.756 9.36a23.578 23.578 0 0 0 2.688-4.21c.169-.41.253-.705.253-.885 0-.148-.11-.222-.33-.222a2.8 2.8 0 0 0-.57.074c-.228.05-.465.115-.71.197-.245.082-.499.172-.76.27a12.69 12.69 0 0 0-.723.296c-.575.23-1.074.414-1.496.554-.423.14-.714.197-.875.172-.16-.024-.178-.16-.05-.406.126-.246.451-.632.975-1.157.27-.295.596-.566.977-.812a9.69 9.69 0 0 1 1.179-.653 6.449 6.449 0 0 1 1.23-.43A5.009 5.009 0 0 1 10.697 2c.693 0 1.277.168 1.75.505.473.336.71.882.71 1.637 0 .541-.178 1.214-.533 2.018-.44.935-.98 1.801-1.622 2.597a75.418 75.418 0 0 1-1.978 2.35c-.609.69-1.192 1.367-1.75 2.031a11.138 11.138 0 0 0-1.42 2.154c.423-.065.951-.197 1.585-.394a57.411 57.411 0 0 0 2.067-.689c.54-.197 1.094-.39 1.66-.578a31.5 31.5 0 0 1 1.661-.505c.541-.148 1.065-.267 1.572-.357.507-.09.98-.135 1.42-.135.49 0 .917.07 1.28.21.364.139.656.364.876.676.017.082.025.193.025.332 0 .14-.013.283-.038.431a4.26 4.26 0 0 1-.089.406.925.925 0 0 1-.101.259 5.81 5.81 0 0 0-1.42-.025c-.507.05-1.048.144-1.623.283-.575.14-1.166.312-1.775.517-.609.205-1.217.414-1.826.628a65.997 65.997 0 0 1-3.46 1.144c-1.125.337-2.143.505-3.056.505-.39 0-.761-.045-1.116-.135a2.727 2.727 0 0 1-.964-.456Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Protect your time and maximize your income</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto" src="./illustration-02-b.png" width="324" height="168" alt="Illustration 2b">
+                                    </div>
+                                </article>
+                                <article class="sm:col-span-2 bg-white/50 rounded-2xl shadow shadow-purple-900/10 px-6 py-16">
+                                    <div class="space-y-10 md:flex items-center justify-between md:space-y-0 md:space-x-8">
+                                        <div>
+                                            <div class="text-purple-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="3">
+                                                    <path d="M4.096 18.954c-.083-.031-.203-.116-.361-.256a1.853 1.853 0 0 1-.311-.324l.025.023a.27.27 0 0 0-.05-.07.27.27 0 0 1-.05-.07l.05.047a3.425 3.425 0 0 1-.274-.394.791.791 0 0 1-.125-.406c0-.131.05-.251.15-.36.1-.108.29-.2.573-.278.282-.077.577-.092.884-.046.307.046.619.108.935.185.215.031.431.07.647.116.216.047.416.062.598.047.316-.031.764-.155 1.346-.371a18.55 18.55 0 0 0 1.881-.835c.673-.34 1.358-.723 2.056-1.148a19.885 19.885 0 0 0 1.906-1.31c.573-.449 1.038-.89 1.395-1.323.357-.432.536-.827.536-1.182 0-.279-.233-.51-.698-.696l.1.046c-.349-.062-.839-.015-1.47.14-.631.154-1.296.324-1.993.51-.648.185-1.28.351-1.894.498-.615.147-1.138.22-1.57.22-.548 0-.95-.12-1.208-.359-.258-.24-.295-.684-.113-1.333a13.934 13.934 0 0 0 .673-.673H7.71a93.782 93.782 0 0 0 1.807-1.844 15.623 15.623 0 0 0 1.707-2.099c-.25.047-.52.1-.81.163-.29.061-.586.12-.885.174-.299.054-.59.096-.872.127-.282.031-.54.047-.772.047-.3 0-.565-.024-.798-.07-.232-.046-.402-.124-.51-.232-.108-.108-.15-.255-.125-.44.025-.186.137-.41.336-.673.067-.062.229-.17.486-.325.258-.155.573-.325.947-.51.374-.186.785-.375 1.233-.568.449-.194.902-.371 1.358-.534a14.01 14.01 0 0 1 1.346-.406c.44-.108.826-.162 1.159-.162.481 0 .868.1 1.158.302.291.2.436.525.436.974 0 .433-.203 1.024-.61 1.774s-1.092 1.712-2.056 2.887v.302h.847c.864 0 1.608.07 2.23.208.623.14 1.134.333 1.533.58.398.248.69.541.872.882.183.34.274.71.274 1.113 0 .526-.162 1.086-.486 1.681-.324.596-.772 1.187-1.345 1.774a13.757 13.757 0 0 1-2.056 1.705 16.163 16.163 0 0 1-2.604 1.45c-.938.417-1.93.75-2.977.997S6.422 19 5.342 19h-.635c-.208 0-.411-.015-.61-.046Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Control your availability and book more clients</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto max-md:-translate-x-6" src="./illustration-03.png" width="330" height="280" alt="Illustration 3">
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Pink section -->
+                <section data-bg-class="bg-pink-200">
+                    <div class="max-w-3xl mx-auto">
+                        <div class="py-6 md:py-10">
+                            <div class="max-w-sm mx-auto sm:max-w-none grid sm:grid-cols-2 gap-6">
+                                <article class="bg-white/50 rounded-2xl shadow shadow-pink-900/10 p-6">
+                                    <div class="space-y-10">
+                                        <div>
+                                            <div class="text-pink-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="1">
+                                                    <path d="M6.466 17.537c-.31-.308-.466-.74-.466-1.295 0-.324.045-.67.135-1.04.09-.37.204-.733.344-1.088.139-.354.282-.686.429-.994a20.435 20.435 0 0 1 .417-.833.269.269 0 0 1 .05-.07c.048-.092.118-.246.208-.462.09-.216.196-.474.319-.775l.417-1.017c.155-.378.323-.768.503-1.168.213-.51.434-1.026.663-1.55.229-.524.441-1.01.638-1.457.196-.447.364-.833.503-1.157.139-.324.233-.54.282-.647.098-.17.151-.282.16-.336a.903.903 0 0 0 .012-.127c.065-.247.147-.516.245-.81.098-.292.217-.566.356-.82.139-.255.303-.467.49-.637A.942.942 0 0 1 12.823 1c.18 0 .372.058.577.173.204.116.405.313.601.59l-.05-.07c0 .016-.08.251-.244.706-.164.455-.385 1.057-.663 1.804a686.082 686.082 0 0 1-2.074 5.494 530.456 530.456 0 0 1-2.171 5.562c-.311.779-.577 1.415-.798 1.908-.22.494-.364.771-.43.833a4.054 4.054 0 0 1-.576-.15c-.27-.085-.446-.19-.528-.313Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Enable automated appointment booking</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto" src="./illustration-01-c.png" width="324" height="168" alt="Illustration 1c">
+                                    </div>
+                                </article>
+                                <article class="bg-white/50 rounded-2xl shadow shadow-pink-900/10 p-6">
+                                    <div class="space-y-10">
+                                        <div>
+                                            <div class="text-pink-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="2">
+                                                    <path d="M2.532 17.41c-.202-.132-.342-.276-.418-.432A1.135 1.135 0 0 1 2 16.474c0-.213.042-.394.127-.542.084-.147.186-.303.304-.467.338-.41.689-.813 1.052-1.207.364-.393.723-.779 1.078-1.156A72.729 72.729 0 0 0 7.756 9.36a23.578 23.578 0 0 0 2.688-4.21c.169-.41.253-.705.253-.885 0-.148-.11-.222-.33-.222a2.8 2.8 0 0 0-.57.074c-.228.05-.465.115-.71.197-.245.082-.499.172-.76.27a12.69 12.69 0 0 0-.723.296c-.575.23-1.074.414-1.496.554-.423.14-.714.197-.875.172-.16-.024-.178-.16-.05-.406.126-.246.451-.632.975-1.157.27-.295.596-.566.977-.812a9.69 9.69 0 0 1 1.179-.653 6.449 6.449 0 0 1 1.23-.43A5.009 5.009 0 0 1 10.697 2c.693 0 1.277.168 1.75.505.473.336.71.882.71 1.637 0 .541-.178 1.214-.533 2.018-.44.935-.98 1.801-1.622 2.597a75.418 75.418 0 0 1-1.978 2.35c-.609.69-1.192 1.367-1.75 2.031a11.138 11.138 0 0 0-1.42 2.154c.423-.065.951-.197 1.585-.394a57.411 57.411 0 0 0 2.067-.689c.54-.197 1.094-.39 1.66-.578a31.5 31.5 0 0 1 1.661-.505c.541-.148 1.065-.267 1.572-.357.507-.09.98-.135 1.42-.135.49 0 .917.07 1.28.21.364.139.656.364.876.676.017.082.025.193.025.332 0 .14-.013.283-.038.431a4.26 4.26 0 0 1-.089.406.925.925 0 0 1-.101.259 5.81 5.81 0 0 0-1.42-.025c-.507.05-1.048.144-1.623.283-.575.14-1.166.312-1.775.517-.609.205-1.217.414-1.826.628a65.997 65.997 0 0 1-3.46 1.144c-1.125.337-2.143.505-3.056.505-.39 0-.761-.045-1.116-.135a2.727 2.727 0 0 1-.964-.456Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Protect your time and maximize your income</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto" src="./illustration-02-c.png" width="324" height="168" alt="Illustration 2c">
+                                    </div>
+                                </article>
+                                <article class="sm:col-span-2 bg-white/50 rounded-2xl shadow shadow-pink-900/10 px-6 py-16">
+                                    <div class="space-y-10 md:flex items-center justify-between md:space-y-0 md:space-x-8">
+                                        <div>
+                                            <div class="text-pink-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="3">
+                                                    <path d="M4.096 18.954c-.083-.031-.203-.116-.361-.256a1.853 1.853 0 0 1-.311-.324l.025.023a.27.27 0 0 0-.05-.07.27.27 0 0 1-.05-.07l.05.047a3.425 3.425 0 0 1-.274-.394.791.791 0 0 1-.125-.406c0-.131.05-.251.15-.36.1-.108.29-.2.573-.278.282-.077.577-.092.884-.046.307.046.619.108.935.185.215.031.431.07.647.116.216.047.416.062.598.047.316-.031.764-.155 1.346-.371a18.55 18.55 0 0 0 1.881-.835c.673-.34 1.358-.723 2.056-1.148a19.885 19.885 0 0 0 1.906-1.31c.573-.449 1.038-.89 1.395-1.323.357-.432.536-.827.536-1.182 0-.279-.233-.51-.698-.696l.1.046c-.349-.062-.839-.015-1.47.14-.631.154-1.296.324-1.993.51-.648.185-1.28.351-1.894.498-.615.147-1.138.22-1.57.22-.548 0-.95-.12-1.208-.359-.258-.24-.295-.684-.113-1.333a13.934 13.934 0 0 0 .673-.673H7.71a93.782 93.782 0 0 0 1.807-1.844 15.623 15.623 0 0 0 1.707-2.099c-.25.047-.52.1-.81.163-.29.061-.586.12-.885.174-.299.054-.59.096-.872.127-.282.031-.54.047-.772.047-.3 0-.565-.024-.798-.07-.232-.046-.402-.124-.51-.232-.108-.108-.15-.255-.125-.44.025-.186.137-.41.336-.673.067-.062.229-.17.486-.325.258-.155.573-.325.947-.51.374-.186.785-.375 1.233-.568.449-.194.902-.371 1.358-.534a14.01 14.01 0 0 1 1.346-.406c.44-.108.826-.162 1.159-.162.481 0 .868.1 1.158.302.291.2.436.525.436.974 0 .433-.203 1.024-.61 1.774s-1.092 1.712-2.056 2.887v.302h.847c.864 0 1.608.07 2.23.208.623.14 1.134.333 1.533.58.398.248.69.541.872.882.183.34.274.71.274 1.113 0 .526-.162 1.086-.486 1.681-.324.596-.772 1.187-1.345 1.774a13.757 13.757 0 0 1-2.056 1.705 16.163 16.163 0 0 1-2.604 1.45c-.938.417-1.93.75-2.977.997S6.422 19 5.342 19h-.635c-.208 0-.411-.015-.61-.046Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Control your availability and book more clients</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto max-md:-translate-x-6" src="./illustration-03.png" width="330" height="280" alt="Illustration 3">
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Emerald section -->
+                <section data-bg-class="bg-emerald-200">
+                    <div class="max-w-3xl mx-auto">
+                        <div class="py-6 md:py-10">
+                            <div class="max-w-sm mx-auto sm:max-w-none grid sm:grid-cols-2 gap-6">
+                                <article class="bg-white/50 rounded-2xl shadow shadow-emerald-900/10 p-6">
+                                    <div class="space-y-10">
+                                        <div>
+                                            <div class="text-emerald-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="1">
+                                                    <path d="M6.466 17.537c-.31-.308-.466-.74-.466-1.295 0-.324.045-.67.135-1.04.09-.37.204-.733.344-1.088.139-.354.282-.686.429-.994a20.435 20.435 0 0 1 .417-.833.269.269 0 0 1 .05-.07c.048-.092.118-.246.208-.462.09-.216.196-.474.319-.775l.417-1.017c.155-.378.323-.768.503-1.168.213-.51.434-1.026.663-1.55.229-.524.441-1.01.638-1.457.196-.447.364-.833.503-1.157.139-.324.233-.54.282-.647.098-.17.151-.282.16-.336a.903.903 0 0 0 .012-.127c.065-.247.147-.516.245-.81.098-.292.217-.566.356-.82.139-.255.303-.467.49-.637A.942.942 0 0 1 12.823 1c.18 0 .372.058.577.173.204.116.405.313.601.59l-.05-.07c0 .016-.08.251-.244.706-.164.455-.385 1.057-.663 1.804a686.082 686.082 0 0 1-2.074 5.494 530.456 530.456 0 0 1-2.171 5.562c-.311.779-.577 1.415-.798 1.908-.22.494-.364.771-.43.833a4.054 4.054 0 0 1-.576-.15c-.27-.085-.446-.19-.528-.313Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Enable automated appointment booking</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto" src="./illustration-01-d.png" width="324" height="168" alt="Illustration 1d">
+                                    </div>
+                                </article>
+                                <article class="bg-white/50 rounded-2xl shadow shadow-emerald-900/10 p-6">
+                                    <div class="space-y-10">
+                                        <div>
+                                            <div class="text-emerald-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="2">
+                                                    <path d="M2.532 17.41c-.202-.132-.342-.276-.418-.432A1.135 1.135 0 0 1 2 16.474c0-.213.042-.394.127-.542.084-.147.186-.303.304-.467.338-.41.689-.813 1.052-1.207.364-.393.723-.779 1.078-1.156A72.729 72.729 0 0 0 7.756 9.36a23.578 23.578 0 0 0 2.688-4.21c.169-.41.253-.705.253-.885 0-.148-.11-.222-.33-.222a2.8 2.8 0 0 0-.57.074c-.228.05-.465.115-.71.197-.245.082-.499.172-.76.27a12.69 12.69 0 0 0-.723.296c-.575.23-1.074.414-1.496.554-.423.14-.714.197-.875.172-.16-.024-.178-.16-.05-.406.126-.246.451-.632.975-1.157.27-.295.596-.566.977-.812a9.69 9.69 0 0 1 1.179-.653 6.449 6.449 0 0 1 1.23-.43A5.009 5.009 0 0 1 10.697 2c.693 0 1.277.168 1.75.505.473.336.71.882.71 1.637 0 .541-.178 1.214-.533 2.018-.44.935-.98 1.801-1.622 2.597a75.418 75.418 0 0 1-1.978 2.35c-.609.69-1.192 1.367-1.75 2.031a11.138 11.138 0 0 0-1.42 2.154c.423-.065.951-.197 1.585-.394a57.411 57.411 0 0 0 2.067-.689c.54-.197 1.094-.39 1.66-.578a31.5 31.5 0 0 1 1.661-.505c.541-.148 1.065-.267 1.572-.357.507-.09.98-.135 1.42-.135.49 0 .917.07 1.28.21.364.139.656.364.876.676.017.082.025.193.025.332 0 .14-.013.283-.038.431a4.26 4.26 0 0 1-.089.406.925.925 0 0 1-.101.259 5.81 5.81 0 0 0-1.42-.025c-.507.05-1.048.144-1.623.283-.575.14-1.166.312-1.775.517-.609.205-1.217.414-1.826.628a65.997 65.997 0 0 1-3.46 1.144c-1.125.337-2.143.505-3.056.505-.39 0-.761-.045-1.116-.135a2.727 2.727 0 0 1-.964-.456Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Protect your time and maximize your income</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto" src="./illustration-02-d.png" width="324" height="168" alt="Illustration 2d">
+                                    </div>
+                                </article>
+                                <article class="sm:col-span-2 bg-white/50 rounded-2xl shadow shadow-emerald-900/10 px-6 py-16">
+                                    <div class="space-y-10 md:flex items-center justify-between md:space-y-0 md:space-x-8">
+                                        <div>
+                                            <div class="text-emerald-400 mb-3">
+                                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" aria-label="3">
+                                                    <path d="M4.096 18.954c-.083-.031-.203-.116-.361-.256a1.853 1.853 0 0 1-.311-.324l.025.023a.27.27 0 0 0-.05-.07.27.27 0 0 1-.05-.07l.05.047a3.425 3.425 0 0 1-.274-.394.791.791 0 0 1-.125-.406c0-.131.05-.251.15-.36.1-.108.29-.2.573-.278.282-.077.577-.092.884-.046.307.046.619.108.935.185.215.031.431.07.647.116.216.047.416.062.598.047.316-.031.764-.155 1.346-.371a18.55 18.55 0 0 0 1.881-.835c.673-.34 1.358-.723 2.056-1.148a19.885 19.885 0 0 0 1.906-1.31c.573-.449 1.038-.89 1.395-1.323.357-.432.536-.827.536-1.182 0-.279-.233-.51-.698-.696l.1.046c-.349-.062-.839-.015-1.47.14-.631.154-1.296.324-1.993.51-.648.185-1.28.351-1.894.498-.615.147-1.138.22-1.57.22-.548 0-.95-.12-1.208-.359-.258-.24-.295-.684-.113-1.333a13.934 13.934 0 0 0 .673-.673H7.71a93.782 93.782 0 0 0 1.807-1.844 15.623 15.623 0 0 0 1.707-2.099c-.25.047-.52.1-.81.163-.29.061-.586.12-.885.174-.299.054-.59.096-.872.127-.282.031-.54.047-.772.047-.3 0-.565-.024-.798-.07-.232-.046-.402-.124-.51-.232-.108-.108-.15-.255-.125-.44.025-.186.137-.41.336-.673.067-.062.229-.17.486-.325.258-.155.573-.325.947-.51.374-.186.785-.375 1.233-.568.449-.194.902-.371 1.358-.534a14.01 14.01 0 0 1 1.346-.406c.44-.108.826-.162 1.159-.162.481 0 .868.1 1.158.302.291.2.436.525.436.974 0 .433-.203 1.024-.61 1.774s-1.092 1.712-2.056 2.887v.302h.847c.864 0 1.608.07 2.23.208.623.14 1.134.333 1.533.58.398.248.69.541.872.882.183.34.274.71.274 1.113 0 .526-.162 1.086-.486 1.681-.324.596-.772 1.187-1.345 1.774a13.757 13.757 0 0 1-2.056 1.705 16.163 16.163 0 0 1-2.604 1.45c-.938.417-1.93.75-2.977.997S6.422 19 5.342 19h-.635c-.208 0-.411-.015-.61-.046Z" />
+                                                </svg>
+                                            </div>
+                                            <h2 class="text-xl font-extrabold text-slate-800 mb-2">Control your availability and book more clients</h2>
+                                            <p class="text-slate-500">Create custom projects and streamline your customer experience. Use loyalty tools to drive growth and keep customers coming back.</p>
+                                        </div>
+                                        <img class="mx-auto max-md:-translate-x-6" src="./illustration-03.png" width="330" height="280" alt="Illustration 3">
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- End: Background on scroll -->
+
+        </div>
+    </main>
+
+    <!-- Page footer -->
+    <footer class="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
+        <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com">&copy;Cruip - Tailwind CSS templates</a>
+    </footer>
+
+    <!-- Banner with links -->
+    <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50" :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+        <div class="bg-slate-800 text-sm p-3 md:rounded shadow flex justify-between">
+            <div class="text-slate-500 inline-flex">
+                <a class="font-medium hover:underline text-slate-300" href="https://cruip.com/building-an-expandable-header-with-tailwind-css-and-alpinejs/">
+                    Read Tutorial
+                </a>
+                <span class="italic px-1.5">or</span>
+                <a class="font-medium hover:underline text-indigo-500 flex items-center" href="https://github.com/cruip/cruip-tutorials/blob/main/expandable-header/index.html" target="_blank" rel="noreferrer">
+                    <span>Download</span>
+                    <svg class="fill-indigo-400 ml-1" xmlns="http://www.w3.org/2000/svg" width="9" height="9">
+                        <path d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-slate-700" @click="bannerOpen = false">
+                <span class="sr-only">Close</span>
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                    <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="./bg-scroll.js"></script>
+</body>
+
+</html>
