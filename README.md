@@ -28,6 +28,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Building an Expandable Header with Tailwind CSS and Alpine.js](https://cruip.com/building-an-expandable-header-with-tailwind-css-and-alpinejs/)
 - [Create a Gradient Text Reveal on Scroll with Tailwind CSS](https://cruip.com/create-a-gradient-text-reveal-on-scroll-with-tailwind-css/)
 - [Changing Background Color on Scroll with JavaScript](https://cruip.com/changing-background-color-on-scroll-with-javascript/)
+- [Making a Text Scramble Animation with JavaScript](https://cruip.com/making-a-text-scramble-animation-with-javascript/)
 
 ## Terms of use
 

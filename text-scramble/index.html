@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Text Scramble Animation</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="relative font-inter antialiased">
+
+    <main class="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
+        <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-12">
+
+                <!-- Light menu -->
+                <div class="w-full max-w-xs bg-white px-5 py-6 rounded-xl shadow">
+                    <div class="mb-5">
+                        <a href="#0" aria-label="Logo">
+                            <svg class="fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                                <path fill-rule="evenodd" d="M10.972 0a6.806 6.806 0 0 0-4.813 1.993L0 8.153v2.819C0 12.963.856 14.755 2.22 16A6.788 6.788 0 0 0 0 21.028v2.82l6.159 6.159A6.806 6.806 0 0 0 16 29.78a6.806 6.806 0 0 0 9.841.226L32 23.847v-2.819A6.788 6.788 0 0 0 29.78 16 6.788 6.788 0 0 0 32 10.972v-2.82l-6.159-6.159A6.806 6.806 0 0 0 16 2.22 6.788 6.788 0 0 0 10.972 0Zm9.635 16a6.823 6.823 0 0 1-.226-.216L16 11.403l-4.381 4.381a6.823 6.823 0 0 1-.226.216c.077.07.152.142.226.216L16 20.597l4.381-4.381c.074-.074.15-.146.226-.216Zm-2.83 7.848v1.346a3.25 3.25 0 0 0 5.55 2.298l5.117-5.117v-1.347a3.25 3.25 0 0 0-5.549-2.298l-5.117 5.118Zm-3.555 0L9.105 18.73a3.25 3.25 0 0 0-5.55 2.298v1.347l5.118 5.117a3.25 3.25 0 0 0 5.55-2.298v-1.346Zm0-17.042v1.346L9.105 13.27a3.25 3.25 0 0 1-5.55-2.298V9.625l5.118-5.117a3.25 3.25 0 0 1 5.55 2.298Zm8.673 6.464-5.117-5.118V6.806a3.25 3.25 0 0 1 5.549-2.298l5.117 5.117v1.347a3.25 3.25 0 0 1-5.549 2.298Z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="text-lg font-bold text-slate-900 mb-4">Account Settings</div>
+                    <div class="mb-6">
+                        <div class="group relative flex h-8">
+                            <div class="shrink-0 absolute inset-0 ml-3 right-auto pointer-events-none flex items-center justify-center" aria-hidden="true">
+                                <svg class="fill-slate-400" width="16" height="16">
+                                    <path d="m14.707 13.293-1.414 1.414-2.4-2.4 1.414-1.414 2.4 2.4ZM6.8 12.6A5.8 5.8 0 1 1 6.8 1a5.8 5.8 0 0 1 0 11.6Zm0-2a3.8 3.8 0 1 0 0-7.6 3.8 3.8 0 0 0 0 7.6Z"></path>
+                                </svg>
+                            </div>
+                            <input id="search" class="w-full text-sm text-slate-600 bg-slate-100 border border-transparent hover:border-slate-200 appearance-none rounded pl-9 pr-3 outline-none focus:bg-white focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden [&::-webkit-search-results-decoration]:hidden" type="search" aria-label="Search">
+                        </div>
+                    </div>
+                    <!-- Scrumble Text animation -->
+                    <nav class="text-sm flex flex-col space-y-2" role="navigation" data-text-scramble>
+                        <a href="#0" class="relative font-medium text-slate-500 hover:text-slate-600 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-300" aria-current="page">General</a>
+                        <a href="#0" class="relative font-medium text-slate-500 hover:text-slate-600 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-300">Work Preferences</a>
+                        <a href="#0" class="relative font-medium text-slate-500 hover:text-slate-600 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-300">Integrations</a>
+                        <a href="#0" class="relative font-medium text-slate-500 hover:text-slate-600 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-300">Billing</a>
+                        <a href="#0" class="relative font-medium text-slate-500 hover:text-slate-600 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-300">Subscription</a>
+                        <a href="#0" class="relative font-medium text-slate-500 hover:text-slate-600 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-300">Security</a>
+                        <a href="#0" class="relative font-medium text-slate-500 hover:text-slate-600 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-300">Data Sources</a>
+                    </nav>
+                    <!-- End: Scrumble Text animation -->
+                </div>
+                <!-- End: Light menu -->
+
+                <!-- Dark menu -->
+                <div class="w-full max-w-xs bg-slate-900 px-5 py-6 rounded-xl shadow">
+                    <div class="mb-5">
+                        <a href="#0" aria-label="Logo">
+                            <svg class="fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                                <path fill-rule="evenodd" d="M10.972 0a6.806 6.806 0 0 0-4.813 1.993L0 8.153v2.819C0 12.963.856 14.755 2.22 16A6.788 6.788 0 0 0 0 21.028v2.82l6.159 6.159A6.806 6.806 0 0 0 16 29.78a6.806 6.806 0 0 0 9.841.226L32 23.847v-2.819A6.788 6.788 0 0 0 29.78 16 6.788 6.788 0 0 0 32 10.972v-2.82l-6.159-6.159A6.806 6.806 0 0 0 16 2.22 6.788 6.788 0 0 0 10.972 0Zm9.635 16a6.823 6.823 0 0 1-.226-.216L16 11.403l-4.381 4.381a6.823 6.823 0 0 1-.226.216c.077.07.152.142.226.216L16 20.597l4.381-4.381c.074-.074.15-.146.226-.216Zm-2.83 7.848v1.346a3.25 3.25 0 0 0 5.55 2.298l5.117-5.117v-1.347a3.25 3.25 0 0 0-5.549-2.298l-5.117 5.118Zm-3.555 0L9.105 18.73a3.25 3.25 0 0 0-5.55 2.298v1.347l5.118 5.117a3.25 3.25 0 0 0 5.55-2.298v-1.346Zm0-17.042v1.346L9.105 13.27a3.25 3.25 0 0 1-5.55-2.298V9.625l5.118-5.117a3.25 3.25 0 0 1 5.55 2.298Zm8.673 6.464-5.117-5.118V6.806a3.25 3.25 0 0 1 5.549-2.298l5.117 5.117v1.347a3.25 3.25 0 0 1-5.549 2.298Z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="text-lg font-bold text-slate-200 mb-4">Account Settings</div>
+                    <div class="mb-6">
+                        <div class="group relative flex h-8">
+                            <div class="shrink-0 absolute inset-0 ml-3 right-auto pointer-events-none flex items-center justify-center" aria-hidden="true">
+                                <svg class="fill-slate-500" width="16" height="16">
+                                    <path d="m14.707 13.293-1.414 1.414-2.4-2.4 1.414-1.414 2.4 2.4ZM6.8 12.6A5.8 5.8 0 1 1 6.8 1a5.8 5.8 0 0 1 0 11.6Zm0-2a3.8 3.8 0 1 0 0-7.6 3.8 3.8 0 0 0 0 7.6Z"></path>
+                                </svg>
+                            </div>
+                            <input id="search-dark" class="w-full text-sm text-slate-300 bg-slate-800 border border-transparent hover:border-slate-700 appearance-none rounded pl-9 pr-3 outline-none focus:bg-slate-900 focus:border-indigo-500 [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden [&::-webkit-search-results-decoration]:hidden" type="search" aria-label="Search">
+                        </div>
+                    </div>
+                    <!-- Scrumble Text animation -->
+                    <nav class="text-sm flex flex-col space-y-2" role="navigation" data-text-scramble>
+                        <a href="#0" class="relative font-medium text-slate-400 hover:text-slate-300 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-600" aria-current="page">General</a>
+                        <a href="#0" class="relative font-medium text-slate-400 hover:text-slate-300 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-600">Work Preferences</a>
+                        <a href="#0" class="relative font-medium text-slate-400 hover:text-slate-300 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-600">Integrations</a>
+                        <a href="#0" class="relative font-medium text-slate-400 hover:text-slate-300 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-600">Billing</a>
+                        <a href="#0" class="relative font-medium text-slate-400 hover:text-slate-300 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-600">Subscription</a>
+                        <a href="#0" class="relative font-medium text-slate-400 hover:text-slate-300 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-600">Security</a>
+                        <a href="#0" class="relative font-medium text-slate-400 hover:text-slate-300 py-0.5 aria-[current]:text-indigo-500 after:content-[attr(data-scramble-suffix)] before:absolute before:top-0 before:-left-5 before:h-full before:w-0.5 aria-[current]:before:bg-indigo-400 after:text-slate-600">Data Sources</a>
+                    </nav>
+                    <!-- End: Scrumble Text animation -->
+                </div>
+                <!-- End: Dark menu -->
+                
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- Page footer -->
+    <footer class="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
+        <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com">&copy;Cruip - Tailwind CSS templates</a>
+    </footer>
+    
+    <!-- Banner with links -->
+    <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50" :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+        <div class="bg-slate-800 text-sm p-3 md:rounded shadow flex justify-between">
+            <div class="text-slate-500 inline-flex">
+                <a class="font-medium hover:underline text-slate-300" href="https://cruip.com/making-a-text-scramble-animation-with-javascript/">
+                    Read Tutorial
+                </a>
+                <span class="italic px-1.5">or</span>
+                <a class="font-medium hover:underline text-indigo-500 flex items-center" href="https://github.com/cruip/cruip-tutorials/blob/main/text-scramble" target="_blank" rel="noreferrer">
+                    <span>Download</span>
+                    <svg class="fill-indigo-400 ml-1" xmlns="http://www.w3.org/2000/svg" width="9" height="9">
+                        <path d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-slate-700" @click="bannerOpen = false">
+                <span class="sr-only">Close</span>
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                    <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="./text-scramble.js"></script>
+</body>
+
+</html>
