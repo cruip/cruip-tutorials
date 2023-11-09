@@ -38,7 +38,7 @@
             <div class="max-w-5xl mx-auto">
                 <div class="relative z-0 space-y-14" x-data="{ entered: '0' }">
                     <!-- Section #1 -->
-                    <section x-intersect.margin.-70%.0.-30%.0="entered = '0'" class="[--i:0]" :class="'[--e:'+entered+']'">
+                    <section x-intersect.margin.-70%.0.-30%.0="entered = '0'" class="[--i:0]" :style="`--e:${entered}`">
                         <div class="relative bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[2]" :class="entered >= 0 ? 'translate-y-0' : '-translate-y-[calc(100%*(var(--i)-var(--e)))]'">
                             <div class="md:flex justify-between items-center">
                                 <div class="shrink-0 px-12 py-14 max-md:pb-0 md:pr-0">
@@ -62,7 +62,7 @@
                         </div>
                     </section>
                     <!-- Section #2 -->
-                    <section x-intersect.margin.-70%.0.-30%.0="entered = '1'" class="[--i:1]" :class="'[--e:'+entered+']'">
+                    <section x-intersect.margin.-70%.0.-30%.0="entered = '1'" class="[--i:1]" :style="`--e:${entered}`">
                         <div class="relative bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[1]" :class="entered >= 1 ? 'translate-y-0' : '-translate-y-[calc(100%*(var(--i)-var(--e)))]'">
                             <div class="md:flex justify-between items-center">
                                 <div class="shrink-0 px-12 py-14 max-md:pb-0 md:pr-0">
@@ -86,7 +86,7 @@
                         </div>
                     </section>
                     <!-- Section #3 -->
-                    <section x-intersect.margin.-70%.0.-30%.0="entered = '2'" class="[--i:2]" :class="'[--e:'+entered+']'">
+                    <section x-intersect.margin.-70%.0.-30%.0="entered = '2'" class="[--i:2]" :style="`--e:${entered}`">
                         <div class="relative bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-0" :class="entered >= 2 ? 'translate-y-0' : '-translate-y-[calc(100%*(var(--i)-var(--e)))]'">
                             <div class="md:flex justify-between items-center">
                                 <div class="shrink-0 px-12 py-14 max-md:pb-0 md:pr-0">
