@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pricing Table with Slider</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="relative font-inter antialiased">
+
+    <main class="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
+        <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+
+            <header class="text-center mb-8">
+                <h1 class="text-xl font-bold text-slate-900">How many contacts do you have?</h1>
+            </header>
+
+            <!-- Pricing table component -->
+            <div x-data="pricingSlider">
+
+                <!-- Pricing slider -->
+                <div class="max-w-sm mx-auto lg:max-w-3xl space-y-3 mb-12 lg:mb-16">
+                    <div class="text-center text-sm text-slate-700 font-medium" x-text="`${prices[value].contacts} contacts/month`"></div>
+                    <div class="relative flex items-center" :style="`--progress:${progress};--segments-width:${segmentsWidth}`">
+                        <div class="
+                            absolute left-2.5 right-2.5 h-1.5 bg-slate-200 rounded-full overflow-hidden
+                            before:absolute
+                            before:inset-0
+                            before:bg-gradient-to-r
+                            before:from-indigo-300
+                            before:to-indigo-500
+                            before:[mask-image:_linear-gradient(to_right,theme(colors.white),theme(colors.white)_var(--progress),transparent_var(--progress))]
+                            after:absolute
+                            after:inset-0
+                            after:bg-[repeating-linear-gradient(to_right,transparent,transparent_calc(var(--segments-width)-1px),theme(colors.white/.7)_calc(var(--segments-width)-1px),theme(colors.white/.7)_calc(var(--segments-width)+1px))]
+                            [&[x-cloak]]:hidden
+                        " aria-hidden="true" x-cloak></div>
+                        <input class="
+                            relative appearance-none cursor-pointer w-full bg-transparent focus:outline-none
+                            [&::-webkit-slider-thumb]:appearance-none
+                            [&::-webkit-slider-thumb]:h-5
+                            [&::-webkit-slider-thumb]:w-5
+                            [&::-webkit-slider-thumb]:rounded-full
+                            [&::-webkit-slider-thumb]:bg-white
+                            [&::-webkit-slider-thumb]:shadow
+                            [&::-webkit-slider-thumb]:focus-visible:ring
+                            [&::-webkit-slider-thumb]:focus-visible:ring-indigo-300
+                            [&::-moz-range-thumb]:h-5
+                            [&::-moz-range-thumb]:w-5                            
+                            [&::-moz-range-thumb]:rounded-full
+                            [&::-moz-range-thumb]:bg-white
+                            [&::-moz-range-thumb]:border-none
+                            [&::-moz-range-thumb]:shadow
+                            [&::-moz-range-thumb]:focus-visible:ring
+                            [&::-moz-range-thumb]:focus-visible:ring-indigo-300                            
+                        " type="range" min="0" :max="prices.length - 1" :aria-valuetext="`${prices[value].contacts} contacts/month`" aria-label="Pricing Slider" x-model="value">
+                    </div>
+                    <div>
+                        <ul class="flex justify-between text-xs font-medium text-slate-500 px-2.5">
+                            <template x-for="(price, index) in prices" :key="index">
+                                <li class="relative"><span class="absolute -translate-x-1/2" x-text="price.contacts"></span></li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="max-w-sm mx-auto grid gap-6 lg:grid-cols-2 items-start lg:max-w-[728px]">
+            
+                    <!-- Pricing tab 1 -->
+                    <div class="h-full">                                
+                        <div class="relative flex flex-col h-full p-6 pb-10">
+                            <div class="h-8" aria-hidden="true"></div>
+                            <div class="mb-5">
+                                <div class="text-slate-900 font-semibold mb-1">Starter</div>
+                                <div class="inline-flex items-baseline mb-2">
+                                    <span class="text-slate-900 font-bold text-3xl">$</span>
+                                    <span class="text-slate-900 font-bold text-4xl" x-text="prices[value].plans.starter"></span>
+                                    <span class="text-slate-500 font-medium">/mo</span>
+                                </div>
+                                <div class="text-sm text-slate-500 mb-5">There are many variations available, but the majority have suffered.</div>
+                                <a class="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 transition-colors duration-150" href="#0">
+                                    Purchase Plan
+                                </a>
+                            </div>
+                            <div class="text-slate-900 text-sm font-medium mb-4">Includes:</div>
+                            <ul class="text-slate-600 text-sm space-y-3 grow">
+                                <li class="flex items-center">
+                                    <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                                    </svg>
+                                    <span>Unlimited placeholder texts</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                                    </svg>
+                                    <span>Consectetur adipiscing elit</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                                    </svg>
+                                    <span>Excepteur sint occaecat cupidatat</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                                    </svg>
+                                    <span>Officia deserunt mollit anim</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Pricing tab 2 -->
+                    <div class="h-full">
+                        <div class="relative flex flex-col h-full p-6 pb-10 rounded-2xl bg-slate-900 border border-slate-900 shadow shadow-slate-950/5">
+                            <div class="absolute top-0 right-0 mr-6 -mt-4">
+                                <div class="inline-flex items-center text-xs font-semibold py-1.5 px-3 bg-emerald-500 text-white rounded-full shadow-sm shadow-slate-950/5">Most Popular</div>
+                            </div>
+                            <div class="h-8" aria-hidden="true">
+                                <svg class="drop-shadow-[0_0_8px_rgba(224,154,19,0.7)]" xmlns="http://www.w3.org/2000/svg" width="24" height="26">
+                                    <defs>
+                                        <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#FBBF24" />
+                                            <stop offset="100%" stop-color="#F59E0B" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path fill="url(#a)" fill-rule="evenodd" d="M15 0 0 16h11L9 26l15-16H13z" />
+                                </svg>
+                            </div>
+                            <div class="mb-5">
+                                <div class="text-slate-200 font-semibold mb-1">Business</div>
+                                <div class="inline-flex items-baseline mb-2">
+                                    <span class="text-slate-200 font-bold text-3xl">$</span>
+                                    <span class="text-slate-200 font-bold text-4xl" x-text="prices[value].plans.business"></span>
+                                    <span class="text-slate-500 font-medium">/mo</span>
+                                </div>
+                                <div class="text-sm text-slate-500 mb-5">There are many variations available, but the majority have suffered.</div>
+                                <a class="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-600 transition-colors duration-150" href="#0">
+                                    Purchase Plan
+                                </a>
+                            </div>
+                            <div class="text-slate-200 text-sm font-medium mb-4">Everything in Starter, plus:</div>
+                            <ul class="text-slate-400 text-sm space-y-3 grow">
+                                <li class="flex items-center">
+                                    <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                                    </svg>
+                                    <span>Unlimited placeholder texts</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                                    </svg>
+                                    <span>Consectetur adipiscing elit</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                                    </svg>
+                                    <span>Excepteur sint occaecat cupidatat</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                                    </svg>
+                                    <span>Officia deserunt mollit anim</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-3 h-3 fill-emerald-500 mr-3 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                                    </svg>
+                                    <span>Predefined chunks as necessary</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                </div>
+            
+            </div>
+            <!-- Slider data and functionality: https://github.com/alpinejs/alpine -->
+            <script>
+                document.addEventListener('alpine:init', () => {
+                    Alpine.data('pricingSlider', () => ({
+                        value: 2,
+                        prices: [
+                            {
+                                contacts: '1K',
+                                plans: {
+                                    starter: '5',
+                                    business: '9',
+                                }
+                            },
+                            {
+                                contacts: '5K',
+                                plans: {
+                                    starter: '19',
+                                    business: '29',
+                                }
+                            },
+                            {
+                                contacts: '10K',
+                                plans: {
+                                    starter: '29',
+                                    business: '49',
+                                }
+                            },
+                            {
+                                contacts: '15K',
+                                plans: {
+                                    starter: '39',
+                                    business: '59',
+                                }
+                            },
+                            {
+                                contacts: '1M',
+                                plans: {
+                                    starter: '1,490',
+                                    business: '2,490',
+                                }
+                            },
+                        ],
+                        segmentsWidth: '100%',
+                        progress: '0%',
+                        segments: 1,
+                        calculateProgress() {
+                            this.segmentsWidth = 100 / this.segments + '%'
+                            this.progress = 100 / this.segments * this.value + '%'
+                        },
+                        init() {
+                            this.segments = this.prices.length - 1
+                            this.calculateProgress()
+                            this.$watch('value', () => this.calculateProgress())
+                        },
+                    }))
+                })
+            </script>            
+            <!-- End: Pricing table component -->
+
+        </div>
+    </main>
+
+    <!-- Page footer -->
+    <footer class="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
+        <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com">&copy;Cruip - Tailwind CSS templates</a>
+    </footer>
+
+    <!-- Banner with links -->
+    <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50" :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+        <div class="bg-slate-800 text-sm p-3 md:rounded shadow flex justify-between">
+            <div class="text-slate-500 inline-flex">
+                <a class="font-medium hover:underline text-slate-300" href="https://cruip.com/creating-a-pricing-table-with-range-slider-using-tailwind-css-and-alpinejs/">
+                    Read Tutorial
+                </a>
+                <span class="italic px-1.5">or</span>
+                <a class="font-medium hover:underline text-indigo-500 flex items-center" href="https://github.com/cruip/cruip-tutorials/blob/main/pricing-table-slider/index.html" target="_blank" rel="noreferrer">
+                    <span>Download</span>
+                    <svg class="fill-indigo-400 ml-1" xmlns="http://www.w3.org/2000/svg" width="9" height="9">
+                        <path d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-slate-700" @click="bannerOpen = false">
+                <span class="sr-only">Close</span>
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                    <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
