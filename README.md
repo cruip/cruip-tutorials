@@ -30,6 +30,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Changing Background Color on Scroll with JavaScript](https://cruip.com/changing-background-color-on-scroll-with-javascript/)
 - [Making a Text Scramble Animation with JavaScript](https://cruip.com/making-a-text-scramble-animation-with-javascript/)
 - [Creating a Pricing Table with Range Slider using Tailwind CSS and Alpine.js](https://cruip.com/creating-a-pricing-table-with-range-slider-using-tailwind-css-and-alpinejs/)
+- [Creating a Tooltip-like Testimonial with Tailwind and Alpine.js](https://cruip.com/creating-a-tooltip-like-testimonial-with-tailwind-and-alpine-js/)
 
 ## Terms of use
 
