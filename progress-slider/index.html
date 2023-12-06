@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Slider with Progress Indicator</title>
+    <title>Carousel with Progress Indicators</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,8 +30,8 @@
         <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
             <div class="flex justify-center">
 
-                <!-- Slider component -->
-                <div class="w-full max-w-5xl mx-auto text-center" x-data="slider">
+                <!-- Carousel component -->
+                <div class="w-full max-w-5xl mx-auto text-center" x-data="carousel">
                     <!-- Item image -->
                     <div class="transition-all duration-150 delay-300 ease-in-out">
                         <div class="relative flex flex-col" x-ref="items">
@@ -69,10 +69,10 @@
                         </template>
                     </div>
                 </div>
-                <!-- Slider data and functionality: https://github.com/alpinejs/alpine -->
+                <!-- Carousel data and functionality: https://github.com/alpinejs/alpine -->
                 <script>
                     document.addEventListener('alpine:init', () => {
-                        Alpine.data('slider', () => ({
+                        Alpine.data('carousel', () => ({
                             duration: 5000,
                             active: 0,
                             progress: 0,
@@ -132,7 +132,7 @@
                         }))
                     })
                 </script>
-                <!-- End: Slider component -->
+                <!-- End: Carousel component -->
 
             </div>
         </div>
