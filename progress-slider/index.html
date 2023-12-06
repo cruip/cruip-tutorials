@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Slider with Progress Indicator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="relative font-inter antialiased">
+
+    <main class="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
+        <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+            <div class="flex justify-center">
+
+                <!-- Slider component -->
+                <div class="w-full max-w-5xl mx-auto text-center" x-data="slider">
+                    <!-- Item image -->
+                    <div class="transition-all duration-150 delay-300 ease-in-out">
+                        <div class="relative flex flex-col" x-ref="items">
+                            <!-- Alpine.js template for items: https://github.com/alpinejs/alpine#x-for -->
+                            <template x-for="(item, index) in items" :key="index">
+                                <div
+                                    x-show="active === index"
+                                    x-transition:enter="transition ease-in-out duration-500 delay-200 order-first"
+                                    x-transition:enter-start="opacity-0 scale-105"
+                                    x-transition:enter-end="opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in-out duration-300 absolute"
+                                    x-transition:leave-start="opacity-100 scale-100"
+                                    x-transition:leave-end="opacity-0 scale-95"
+                                >
+                                    <img class="rounded-xl" :src="item.img" width="1024" height="576" :alt="item.desc">
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="max-w-xs sm:max-w-sm md:max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                        <!-- Alpine.js template for buttons: https://github.com/alpinejs/alpine#x-for -->
+                        <template x-for="(item, index) in items" :key="index">
+                            <button class="p-2 rounded focus:outline-none focus-visible:ring focus-visible:ring-indigo-300 group" @click="active = index">
+                                <span class="text-center flex flex-col items-center" :class="active === index ? '' : 'opacity-50 group-hover:opacity-100 group-focus:opacity-100 transition-opacity'">
+                                    <span class="flex items-center justify-center relative w-9 h-9 rounded-full bg-indigo-100 mb-2">
+                                        <img :src="item.buttonIcon" :alt="item.desc">
+                                    </span>
+                                    <span class="block text-sm font-medium text-slate-900 mb-2" x-text="item.desc"></span>
+                                    <span class="block relative w-full bg-slate-200 h-1 rounded-full" role="progressbar" :aria-valuenow="active === index ? progress : 0" aria-valuemin="0" aria-valuemax="100">
+                                        <span class="absolute inset-0 bg-indigo-500 rounded-[inherit]" :style="`${active === index ? `width: ${progress}%` : 'width: 0%'}`"></span>
+                                    </span>
+                                </span>
+                            </button>
+                        </template>
+                    </div>
+                </div>
+                <!-- Slider data and functionality: https://github.com/alpinejs/alpine -->
+                <script>
+                    document.addEventListener('alpine:init', () => {
+                        Alpine.data('slider', () => ({
+                            duration: 5000,
+                            active: 0,
+                            progress: 0,
+                            firstFrameTime: 0,
+                            items: [
+                                {
+                                    img: 'ps-image-01.png',
+                                    desc: 'Omnichannel',
+                                    buttonIcon: 'ps-icon-01.svg',
+                                },
+                                {
+                                    img: 'ps-image-02.png',
+                                    desc: 'Multilingual',
+                                    buttonIcon: 'ps-icon-02.svg',
+                                },
+                                {
+                                    img: 'ps-image-03.png',
+                                    desc: 'Interpolate',
+                                    buttonIcon: 'ps-icon-03.svg',
+                                },
+                                {
+                                    img: 'ps-image-04.png',
+                                    desc: 'Enriched',
+                                    buttonIcon: 'ps-icon-04.svg',
+                                },                                
+                            ],
+                            init() {
+                                this.startAnimation()
+                                this.$watch('active', callback => {
+                                    cancelAnimationFrame(this.frame)
+                                    this.startAnimation()
+                                })
+                            },
+                            startAnimation() {
+                                this.progress = 0
+                                this.$nextTick(() => {
+                                    this.heightFix()
+                                    this.firstFrameTime = performance.now()
+                                    this.frame = requestAnimationFrame(this.animate.bind(this))
+                                })
+                            },
+                            animate(now) {
+                                let timeFraction = (now - this.firstFrameTime) / this.duration
+                                if (timeFraction <= 1) {
+                                    this.progress = timeFraction * 100
+                                    this.frame = requestAnimationFrame(this.animate.bind(this))
+                                } else {
+                                    timeFraction = 1
+                                    this.active = (this.active + 1) % this.items.length
+                                }
+                            },
+                            heightFix() {
+                                this.$nextTick(() => {
+                                    this.$refs.items.parentElement.style.height = this.$refs.items.children[this.active + 1].clientHeight + 'px'
+                                })
+                            }                            
+                        }))
+                    })
+                </script>
+                <!-- End: Slider component -->
+
+            </div>
+        </div>
+    </main>
+    
+    <!-- Page footer -->
+    <footer class="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
+        <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com">&copyCruip - Tailwind CSS templates</a>
+    </footer>
+
+    <!-- Banner with links -->
+    <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50" :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+        <div class="bg-slate-800 text-sm p-3 md:rounded shadow flex justify-between">
+            <div class="text-slate-500 inline-flex">
+                <a class="font-medium hover:underline text-slate-300" href="https://cruip.com/create-a-carousel-with-progress-indicators-using-tailwind-and-alpinejs/">
+                    Read Tutorial
+                </a>
+                <span class="italic px-1.5">or</span>
+                <a class="font-medium hover:underline text-indigo-500 flex items-center" href="https://github.com/cruip/cruip-tutorials/blob/main/progress-slider/index.html" target="_blank" rel="noreferrer">
+                    <span>Download</span>
+                    <svg class="fill-indigo-400 ml-1" xmlns="http://www.w3.org/2000/svg" width="9" height="9">
+                        <path d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-slate-700" @click="bannerOpen = false">
+                <span class="sr-only">Close</span>
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                    <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
