@@ -32,6 +32,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Creating a Pricing Table with Range Slider using Tailwind CSS and Alpine.js](https://cruip.com/creating-a-pricing-table-with-range-slider-using-tailwind-css-and-alpinejs/)
 - [Creating a Tooltip-like Testimonial with Tailwind and Alpine.js](https://cruip.com/creating-a-tooltip-like-testimonial-with-tailwind-and-alpine-js/)
 - [Create a Carousel with Progress Indicators using Tailwind and Alpine.js](https://cruip.com/create-a-carousel-with-progress-indicators-using-tailwind-and-alpinejs/)
+- [Make a Stunning Card Hover Animations with Tailwind CSS](https://cruip.com/make-a-stunning-card-hover-animations-with-tailwind-css/)
 
 ## Terms of use
 
