@@ -33,7 +33,8 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Creating a Tooltip-like Testimonial with Tailwind and Alpine.js](https://cruip.com/creating-a-tooltip-like-testimonial-with-tailwind-and-alpine-js/)
 - [Create a Carousel with Progress Indicators using Tailwind and Alpine.js](https://cruip.com/create-a-carousel-with-progress-indicators-using-tailwind-and-alpinejs/)
 - [Make a Stunning Card Hover Animations with Tailwind CSS](https://cruip.com/make-a-stunning-card-hover-animations-with-tailwind-css/)
-- [Hamburger Menu Button Animations with Tailwind CSS](hamburger-menu-button-animations-with-tailwind-css)
+- [Hamburger Menu Button Animations with Tailwind CSS](https://cruip.com/hamburger-menu-button-animations-with-tailwind-css/)
+- [OTP Form Example Made with Tailwind CSS and JavaScript](https://cruip.com/otp-form-example-made-with-tailwind-css-and-javascript/)
 
 ## Terms of use
 
