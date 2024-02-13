@@ -35,6 +35,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Make a Stunning Card Hover Animations with Tailwind CSS](https://cruip.com/make-a-stunning-card-hover-animations-with-tailwind-css/)
 - [Hamburger Menu Button Animations with Tailwind CSS](https://cruip.com/hamburger-menu-button-animations-with-tailwind-css/)
 - [OTP Form Example Made with Tailwind CSS and JavaScript](https://cruip.com/otp-form-example-made-with-tailwind-css-and-javascript/)
+- [Stick Elements at the Bottom of Cards with Equal Heights](https://cruip.com/stick-elements-at-the-bottom-of-cards-with-equal-heights/)
 
 ## Terms of use
 
