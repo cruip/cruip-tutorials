@@ -36,6 +36,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Hamburger Menu Button Animations with Tailwind CSS](https://cruip.com/hamburger-menu-button-animations-with-tailwind-css/)
 - [OTP Form Example Made with Tailwind CSS and JavaScript](https://cruip.com/otp-form-example-made-with-tailwind-css-and-javascript/)
 - [Stick Elements at the Bottom of Cards with Equal Heights](https://cruip.com/stick-elements-at-the-bottom-of-cards-with-equal-heights/)
+- [Building a Mobile-Friendly Pricing Table with Tailwind CSS](https://cruip.com/building-a-mobile-friendly-pricing-table-with-tailwind-css/)
 
 ## Terms of use
 

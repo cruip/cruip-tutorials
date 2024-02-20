@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Scrollable Pricing Table</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="relative font-inter antialiased">
+
+    <main class="relative min-h-screen flex flex-col justify-center bg-white overflow-hidden">
+        <div class="w-full max-w-5xl mx-auto px-4 md:px-6 py-24">
+
+            <table class="
+                table-auto
+                md:w-full
+                text-sm
+                snap-x
+                scroll-pl-4
+                max-md:grid
+                max-md:gap-x-12
+                max-md:overflow-x-scroll
+                max-md:-mx-4
+                max-md:px-4
+              [&_thead]:bg-slate-50
+                max-md:[&_thead]:contents
+                max-md:[&_tbody]:contents
+                [&_tbody_tr]:border-b
+                [&_tbody_tr]:border-slate-100                
+                max-md:[&_tr]:contents
+                [&_th]:text-slate-900
+                [&_th]:font-semibold
+                [&_td]:text-slate-600
+                [&_th]:py-3
+                md:[&_th]:first:pl-3
+                [md:&_th]:last:pr-3
+                [&_td]:pb-3
+                md:[&_td]:pt-3
+                md:[&_td]:first:pl-3
+                md:[&_td]:last:pr-3
+                [&_tr_td:first-child]:font-medium
+                [&_tr_td:first-child]:text-slate-900
+                [&_th]:whitespace-nowrap
+                [&_td]:whitespace-nowrap
+                max-md:[&_th]:min-w-[60vw]
+                max-md:[&_td]:min-w-[60vw]
+                max-md:[&_tr:last-child_td]:min-w-[calc(100vw-2rem)]
+                [&_th]:text-left
+                [&_th]:group-last:text-right
+                [&_td]:text-left
+                md:[&_td:last-of-type]:text-right
+                max-md:[&_th]:sticky
+                max-md:[&_th]:left-0
+                [&_td]:snap-start
+                max-md:[&_td]:border-b
+                max-md:[&_td:last-of-type]:border-none
+                [&_td]:border-slate-100
+            ">
+                <thead>
+                    <tr>
+                        <th class="max-md:row-start-1 max-md:col-start-1">Plan</th>
+                        <th class="max-md:row-start-3 max-md:col-start-1">Storage</th>
+                        <th class="max-md:row-start-5 max-md:col-start-1">Bandwidth</th>
+                        <th class="max-md:row-start-7 max-md:col-start-1">Emails</th>
+                        <th class="max-md:row-start-9 max-md:col-start-1">SSD</th>
+                        <th class="max-md:row-start-11 max-md:col-start-1">$/hr</th>
+                        <th class="max-md:row-start-13 max-md:col-start-1">$/mo</th>
+                        <th class="max-md:row-start-[15] max-md:col-start-1"><span class="sr-only">Buy</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="max-md:row-start-2 max-md:col-start-1">Basic</td>
+                        <td class="max-md:row-start-4 max-md:col-start-1">20GB</td>
+                        <td class="max-md:row-start-6 max-md:col-start-1">1TB</td>
+                        <td class="max-md:row-start-8 max-md:col-start-1">10</td>
+                        <td class="max-md:row-start-10 max-md:col-start-1">
+                            <span class="h-5 w-5 flex items-center">
+                                <svg class="shrink-0 fill-slate-400 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="12">
+                                    <rect width="12" height="2" y="5" rx="1"/>
+                                </svg>                            
+                            </span>
+                        </td>
+                        <td class="max-md:row-start-12 max-md:col-start-1">0.015</td>
+                        <td class="max-md:row-start-[14] max-md:col-start-1">10</td>
+                        <td class="max-md:row-start-[16] max-md:col-start-1">
+                            <a class="inline-flex justify-center rounded-lg bg-indigo-500 px-2.5 py-1.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 group" href="#0">
+                                <span class="md:sr-only">Get Started</span>
+                                <span class="tracking-normal text-indigo-300 md:text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out max-md:ml-1">-&gt;</span>
+                            </a>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="max-md:row-start-2 max-md:col-start-2">Silver</td>
+                        <td class="max-md:row-start-4 max-md:col-start-2">40GB</td>
+                        <td class="max-md:row-start-6 max-md:col-start-2">2TB</td>
+                        <td class="max-md:row-start-8 max-md:col-start-2">20</td>
+                        <td class="max-md:row-start-10 max-md:col-start-2">
+                            <span class="h-5 w-5 flex items-center">
+                                <svg class="shrink-0 fill-emerald-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"></path>
+                                </svg>                            
+                            </span>
+                        </td>
+                        <td class="max-md:row-start-12 max-md:col-start-2">0.03</td>
+                        <td class="max-md:row-start-[14] max-md:col-start-2">20</td>
+                        <td class="max-md:row-start-[16] max-md:col-start-2">
+                            <a class="inline-flex justify-center rounded-lg bg-indigo-500 px-2.5 py-1.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 group" href="#0">
+                                <span class="md:sr-only">Get Started</span>
+                                <span class="tracking-normal text-indigo-300 md:text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out max-md:ml-1">-&gt;</span>
+                            </a>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="max-md:row-start-2 max-md:col-start-3">Gold</td>
+                        <td class="max-md:row-start-4 max-md:col-start-3">80GB</td>
+                        <td class="max-md:row-start-6 max-md:col-start-3">4TB</td>
+                        <td class="max-md:row-start-8 max-md:col-start-3">40</td>
+                        <td class="max-md:row-start-10 max-md:col-start-3">
+                            <span class="h-5 w-5 flex items-center">
+                                <svg class="shrink-0 fill-emerald-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"></path>
+                                </svg>                            
+                            </span>
+                        </td>
+                        <td class="max-md:row-start-12 max-md:col-start-3">0.06</td>
+                        <td class="max-md:row-start-[14] max-md:col-start-3">40</td>
+                        <td class="max-md:row-start-[16] max-md:col-start-3">
+                            <a class="inline-flex justify-center rounded-lg bg-indigo-500 px-2.5 py-1.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 group" href="#0">
+                                <span class="md:sr-only">Get Started</span>
+                                <span class="tracking-normal text-indigo-300 md:text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out max-md:ml-1">-&gt;</span>
+                            </a>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="max-md:row-start-2 max-md:col-start-4">Platinum</td>
+                        <td class="max-md:row-start-4 max-md:col-start-4">160GB</td>
+                        <td class="max-md:row-start-6 max-md:col-start-4">8TB</td>
+                        <td class="max-md:row-start-8 max-md:col-start-4">80</td>
+                        <td class="max-md:row-start-10 max-md:col-start-4">
+                            <span class="h-5 w-5 flex items-center">
+                                <svg class="shrink-0 fill-emerald-500 mr-3" xmlns="http://www.w3.org/2000/svg" width="12" height="9">
+                                    <path d="M10.28.28 3.989 6.575 1.695 4.28A1 1 0 0 0 .28 5.695l3 3a1 1 0 0 0 1.414 0l7-7A1 1 0 0 0 10.28.28Z"></path>
+                                </svg>                            
+                            </span>
+                        </td>
+                        <td class="max-md:row-start-[12] max-md:col-start-4">0.12</td>
+                        <td class="max-md:row-start-[14] max-md:col-start-4">80</td>
+                        <td class="max-md:row-start-[16] max-md:col-start-4">
+                            <a class="inline-flex justify-center rounded-lg bg-indigo-500 px-2.5 py-1.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 group" href="#0">
+                                <span class="md:sr-only">Get Started</span>
+                                <span class="tracking-normal text-indigo-300 md:text-white group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out max-md:ml-1">-&gt;</span>
+                            </a>                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </main>
+    
+    <!-- Page footer -->
+    <footer class="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
+        <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com">&copy;Cruip - Tailwind CSS templates</a>
+    </footer>
+
+    <!-- Banner with links -->
+    <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50" :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+        <div class="bg-slate-800 text-sm p-3 md:rounded shadow flex justify-between">
+            <div class="text-slate-500 inline-flex">
+                <a class="font-medium hover:underline text-slate-300" href="https://cruip.com/stick-elements-at-the-bottom-of-cards-with-equal-heights/">
+                    Read Tutorial
+                </a>
+                <span class="italic px-1.5">or</span>
+                <a class="font-medium hover:underline text-indigo-500 flex items-center" href="https://github.com/cruip/cruip-tutorials/blob/main/equal-height-cards/index.html" target="_blank" rel="noreferrer">
+                    <span>Download</span>
+                    <svg class="fill-indigo-400 ml-1" xmlns="http://www.w3.org/2000/svg" width="9" height="9">
+                        <path d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-slate-700" @click="bannerOpen = false">
+                <span class="sr-only">Close</span>
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                    <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
