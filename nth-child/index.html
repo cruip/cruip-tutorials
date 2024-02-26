@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Examples of Nth-child Selector in TailwindCSS</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="relative font-inter antialiased">
+
+    <main class="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
+        <div class="w-full max-w-5xl mx-auto px-4 md:px-6 py-24">
+
+            <div class="grid gap-4 md:grid-cols-2">
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">first:</code>
+                    </div>                      
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 first:border-indigo-400 first:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 first:border-indigo-400 first:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 first:border-indigo-400 first:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 first:border-indigo-400 first:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 first:border-indigo-400 first:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 first:border-indigo-400 first:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 first:border-indigo-400 first:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 first:border-indigo-400 first:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 first:border-indigo-400 first:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get the first item</h2>                       
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">last:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 last:border-indigo-400 last:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 last:border-indigo-400 last:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 last:border-indigo-400 last:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 last:border-indigo-400 last:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 last:border-indigo-400 last:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 last:border-indigo-400 last:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 last:border-indigo-400 last:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 last:border-indigo-400 last:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 last:border-indigo-400 last:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get the last item</h2>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">odd:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 odd:border-indigo-400 odd:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 odd:border-indigo-400 odd:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 odd:border-indigo-400 odd:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 odd:border-indigo-400 odd:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 odd:border-indigo-400 odd:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 odd:border-indigo-400 odd:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 odd:border-indigo-400 odd:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 odd:border-indigo-400 odd:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 odd:border-indigo-400 odd:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get odd items</h2>                    
+                </div> 
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">even:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 even:border-indigo-400 even:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 even:border-indigo-400 even:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 even:border-indigo-400 even:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 even:border-indigo-400 even:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 even:border-indigo-400 even:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 even:border-indigo-400 even:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 even:border-indigo-400 even:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 even:border-indigo-400 even:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 even:border-indigo-400 even:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get even items</h2>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-child(3n)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n)]:border-indigo-400 [&:nth-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n)]:border-indigo-400 [&:nth-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n)]:border-indigo-400 [&:nth-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n)]:border-indigo-400 [&:nth-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n)]:border-indigo-400 [&:nth-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n)]:border-indigo-400 [&:nth-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n)]:border-indigo-400 [&:nth-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n)]:border-indigo-400 [&:nth-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n)]:border-indigo-400 [&:nth-child(3n)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get every 3rd element</h2>    
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-last-child(3n)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n)]:border-indigo-400 [&:nth-last-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n)]:border-indigo-400 [&:nth-last-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n)]:border-indigo-400 [&:nth-last-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n)]:border-indigo-400 [&:nth-last-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n)]:border-indigo-400 [&:nth-last-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n)]:border-indigo-400 [&:nth-last-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n)]:border-indigo-400 [&:nth-last-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n)]:border-indigo-400 [&:nth-last-child(3n)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n)]:border-indigo-400 [&:nth-last-child(3n)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get every 3rd item from the end</h2>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-child(3n+1)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n+1)]:border-indigo-400 [&:nth-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n+1)]:border-indigo-400 [&:nth-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n+1)]:border-indigo-400 [&:nth-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n+1)]:border-indigo-400 [&:nth-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n+1)]:border-indigo-400 [&:nth-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n+1)]:border-indigo-400 [&:nth-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n+1)]:border-indigo-400 [&:nth-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n+1)]:border-indigo-400 [&:nth-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n+1)]:border-indigo-400 [&:nth-child(3n+1)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get every 3rd item, starting from the first</h2>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-last-child(3n+1)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n+1)]:border-indigo-400 [&:nth-last-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n+1)]:border-indigo-400 [&:nth-last-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n+1)]:border-indigo-400 [&:nth-last-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n+1)]:border-indigo-400 [&:nth-last-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n+1)]:border-indigo-400 [&:nth-last-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n+1)]:border-indigo-400 [&:nth-last-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n+1)]:border-indigo-400 [&:nth-last-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n+1)]:border-indigo-400 [&:nth-last-child(3n+1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n+1)]:border-indigo-400 [&:nth-last-child(3n+1)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get every 3rd item from the end, starting from the first</h2>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-child(3n-1)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n-1)]:border-indigo-400 [&:nth-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n-1)]:border-indigo-400 [&:nth-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n-1)]:border-indigo-400 [&:nth-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n-1)]:border-indigo-400 [&:nth-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n-1)]:border-indigo-400 [&:nth-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n-1)]:border-indigo-400 [&:nth-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n-1)]:border-indigo-400 [&:nth-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n-1)]:border-indigo-400 [&:nth-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3n-1)]:border-indigo-400 [&:nth-child(3n-1)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get every 3rd item, starting from the second</h2>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-last-child(3n-1)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n-1)]:border-indigo-400 [&:nth-last-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n-1)]:border-indigo-400 [&:nth-last-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n-1)]:border-indigo-400 [&:nth-last-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n-1)]:border-indigo-400 [&:nth-last-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n-1)]:border-indigo-400 [&:nth-last-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n-1)]:border-indigo-400 [&:nth-last-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n-1)]:border-indigo-400 [&:nth-last-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n-1)]:border-indigo-400 [&:nth-last-child(3n-1)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3n-1)]:border-indigo-400 [&:nth-last-child(3n-1)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get every 3rd item from the end, starting from the second</h2>
+                </div>                 
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-child(3)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3)]:border-indigo-400 [&:nth-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3)]:border-indigo-400 [&:nth-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3)]:border-indigo-400 [&:nth-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3)]:border-indigo-400 [&:nth-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3)]:border-indigo-400 [&:nth-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3)]:border-indigo-400 [&:nth-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3)]:border-indigo-400 [&:nth-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3)]:border-indigo-400 [&:nth-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(3)]:border-indigo-400 [&:nth-child(3)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get the 3rd element</h2>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-last-child(3)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3)]:border-indigo-400 [&:nth-last-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3)]:border-indigo-400 [&:nth-last-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3)]:border-indigo-400 [&:nth-last-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3)]:border-indigo-400 [&:nth-last-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3)]:border-indigo-400 [&:nth-last-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3)]:border-indigo-400 [&:nth-last-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3)]:border-indigo-400 [&:nth-last-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3)]:border-indigo-400 [&:nth-last-child(3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(3)]:border-indigo-400 [&:nth-last-child(3)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get the 3rd to last item</h2>
+                </div>                
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-child(-n+3)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+3)]:border-indigo-400 [&:nth-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+3)]:border-indigo-400 [&:nth-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+3)]:border-indigo-400 [&:nth-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+3)]:border-indigo-400 [&:nth-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+3)]:border-indigo-400 [&:nth-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+3)]:border-indigo-400 [&:nth-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+3)]:border-indigo-400 [&:nth-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+3)]:border-indigo-400 [&:nth-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+3)]:border-indigo-400 [&:nth-child(-n+3)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get the first 3 elements</h2>
+                </div> 
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-last-child(-n+3)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(-n+3)]:border-indigo-400 [&:nth-last-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(-n+3)]:border-indigo-400 [&:nth-last-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(-n+3)]:border-indigo-400 [&:nth-last-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(-n+3)]:border-indigo-400 [&:nth-last-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(-n+3)]:border-indigo-400 [&:nth-last-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(-n+3)]:border-indigo-400 [&:nth-last-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(-n+3)]:border-indigo-400 [&:nth-last-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(-n+3)]:border-indigo-400 [&:nth-last-child(-n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-last-child(-n+3)]:border-indigo-400 [&:nth-last-child(-n+3)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get the last 3 elements</h2>
+                </div>                   
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-child(n+3)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3)]:border-indigo-400 [&:nth-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3)]:border-indigo-400 [&:nth-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3)]:border-indigo-400 [&:nth-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3)]:border-indigo-400 [&:nth-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3)]:border-indigo-400 [&:nth-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3)]:border-indigo-400 [&:nth-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3)]:border-indigo-400 [&:nth-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3)]:border-indigo-400 [&:nth-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3)]:border-indigo-400 [&:nth-child(n+3)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get all items starting from the 3rd</h2>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:not(:nth-last-child(-n+2))]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:not(:nth-last-child(-n+2))]:border-indigo-400 [&:not(:nth-last-child(-n+2))]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:not(:nth-last-child(-n+2))]:border-indigo-400 [&:not(:nth-last-child(-n+2))]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:not(:nth-last-child(-n+2))]:border-indigo-400 [&:not(:nth-last-child(-n+2))]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:not(:nth-last-child(-n+2))]:border-indigo-400 [&:not(:nth-last-child(-n+2))]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:not(:nth-last-child(-n+2))]:border-indigo-400 [&:not(:nth-last-child(-n+2))]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:not(:nth-last-child(-n+2))]:border-indigo-400 [&:not(:nth-last-child(-n+2))]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:not(:nth-last-child(-n+2))]:border-indigo-400 [&:not(:nth-last-child(-n+2))]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:not(:nth-last-child(-n+2))]:border-indigo-400 [&:not(:nth-last-child(-n+2))]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:not(:nth-last-child(-n+2))]:border-indigo-400 [&:not(:nth-last-child(-n+2))]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get all items except the first 2, starting from the end</h2>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-child(n+3):nth-last-child(n+3)]:</code>
+                    </div>                    
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3):nth-last-child(n+3)]:border-indigo-400 [&:nth-child(n+3):nth-last-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3):nth-last-child(n+3)]:border-indigo-400 [&:nth-child(n+3):nth-last-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3):nth-last-child(n+3)]:border-indigo-400 [&:nth-child(n+3):nth-last-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3):nth-last-child(n+3)]:border-indigo-400 [&:nth-child(n+3):nth-last-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3):nth-last-child(n+3)]:border-indigo-400 [&:nth-child(n+3):nth-last-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3):nth-last-child(n+3)]:border-indigo-400 [&:nth-child(n+3):nth-last-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3):nth-last-child(n+3)]:border-indigo-400 [&:nth-child(n+3):nth-last-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3):nth-last-child(n+3)]:border-indigo-400 [&:nth-child(n+3):nth-last-child(n+3)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(n+3):nth-last-child(n+3)]:border-indigo-400 [&:nth-child(n+3):nth-last-child(n+3)]:bg-indigo-200"></span>
+                    </div>
+                    <h2 class="font-semibold text-sm">Get items in a range between third and third-to-last</h2>
+                </div> 
+                <div class="bg-white p-5 rounded-xl border border-slate-200">
+                    <div class="mb-4">
+                        <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-child(-n+3)]:</code> <code class="font-mono text-sm text-indigo-500 bg-indigo-50 py-0.5 px-1 rounded-sm">[&:nth-last-child(-n+3)]:</code>
+                    </div>
+                    <div class="grid grid-cols-9 gap-2 max-w-[352px] [&_span]:block [&_span]:max-w-8 [&_span]:aspect-square [&_span]:rounded-full mb-8">
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+2)]:border-indigo-400 [&:nth-child(-n+2)]:bg-indigo-200 [&:nth-last-child(-n+2)]:border-indigo-400 [&:nth-last-child(-n+2)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+2)]:border-indigo-400 [&:nth-child(-n+2)]:bg-indigo-200 [&:nth-last-child(-n+2)]:border-indigo-400 [&:nth-last-child(-n+2)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+2)]:border-indigo-400 [&:nth-child(-n+2)]:bg-indigo-200 [&:nth-last-child(-n+2)]:border-indigo-400 [&:nth-last-child(-n+2)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+2)]:border-indigo-400 [&:nth-child(-n+2)]:bg-indigo-200 [&:nth-last-child(-n+2)]:border-indigo-400 [&:nth-last-child(-n+2)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+2)]:border-indigo-400 [&:nth-child(-n+2)]:bg-indigo-200 [&:nth-last-child(-n+2)]:border-indigo-400 [&:nth-last-child(-n+2)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+2)]:border-indigo-400 [&:nth-child(-n+2)]:bg-indigo-200 [&:nth-last-child(-n+2)]:border-indigo-400 [&:nth-last-child(-n+2)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+2)]:border-indigo-400 [&:nth-child(-n+2)]:bg-indigo-200 [&:nth-last-child(-n+2)]:border-indigo-400 [&:nth-last-child(-n+2)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+2)]:border-indigo-400 [&:nth-child(-n+2)]:bg-indigo-200 [&:nth-last-child(-n+2)]:border-indigo-400 [&:nth-last-child(-n+2)]:bg-indigo-200"></span>
+                        <span class="border border-slate-300 bg-slate-100 [&:nth-child(-n+2)]:border-indigo-400 [&:nth-child(-n+2)]:bg-indigo-200 [&:nth-last-child(-n+2)]:border-indigo-400 [&:nth-last-child(-n+2)]:bg-indigo-200"></span>
+                    </div>                    
+                    <h2 class="font-semibold text-sm">Get all items except the ones between the third and third-to-last</h2>
+                </div>                                 
+            </div>
+            
+        </div>
+    </main>
+    
+    <!-- Page footer -->
+    <footer class="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
+        <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com">&copy;Cruip - Tailwind CSS templates</a>
+    </footer>
+
+    <!-- Banner with links -->
+    <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50" :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+        <div class="bg-slate-800 text-sm p-3 md:rounded shadow flex justify-between">
+            <div class="text-slate-500 inline-flex">
+                <a class="font-medium hover:underline text-slate-300" href="https://cruip.com/tailwind-css-nth-child-selector-cheat-sheet/">
+                    Read Tutorial
+                </a>
+                <span class="italic px-1.5">or</span>
+                <a class="font-medium hover:underline text-indigo-500 flex items-center" href="https://github.com/cruip/cruip-tutorials/blob/main/nth-child/index.html" target="_blank" rel="noreferrer">
+                    <span>Download</span>
+                    <svg class="fill-indigo-400 ml-1" xmlns="http://www.w3.org/2000/svg" width="9" height="9">
+                        <path d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-slate-700" @click="bannerOpen = false">
+                <span class="sr-only">Close</span>
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                    <path d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
