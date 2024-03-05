@@ -38,6 +38,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Stick Elements at the Bottom of Cards with Equal Heights](https://cruip.com/stick-elements-at-the-bottom-of-cards-with-equal-heights/)
 - [Building a Mobile-Friendly Pricing Table with Tailwind CSS](https://cruip.com/building-a-mobile-friendly-pricing-table-with-tailwind-css/)
 - [Tailwind CSS Nth-Child Selector Cheat Sheet](https://cruip.com/tailwind-css-nth-child-selector-cheat-sheet/)
+- [Auto-Growing Textarea with Tailwind CSS](https://cruip.com/auto-growing-textarea-with-tailwind-css/)
 
 ## Terms of use
 
