@@ -39,6 +39,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Building a Mobile-Friendly Pricing Table with Tailwind CSS](https://cruip.com/building-a-mobile-friendly-pricing-table-with-tailwind-css/)
 - [Tailwind CSS Nth-Child Selector Cheat Sheet](https://cruip.com/tailwind-css-nth-child-selector-cheat-sheet/)
 - [Auto-Growing Textarea with Tailwind CSS](https://cruip.com/auto-growing-textarea-with-tailwind-css/)
+- [Animated Gradient Borders with Tailwind CSS](https://cruip.com/animated-gradient-borders-with-tailwind-css/)
 
 ## Terms of use
 
