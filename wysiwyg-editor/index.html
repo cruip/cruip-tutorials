@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>WYSIWYG Editor</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="relative font-inter antialiased">
+
+    <main class="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
+        <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+            <div class="flex justify-center">
+
+                <div class="w-full max-w-xl mx-auto text-center bg-white rounded-2xl shadow-xl">
+                    <!-- Header -->
+                    <header>
+                        <div class="h-12 border-b [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]">
+                            <div class="h-full flex justify-between items-center sm:gap-1 overflow-x-scroll [scrollbar-width:none] px-3">
+                                <!-- Left actions -->
+                                <div class="flex-1 flex sm:gap-1">
+                                    <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Font size" title="Font size">
+                                        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+                                            <path d="M14 1a1 1 0 0 1-1 1H8v11a1 1 0 1 1-2 0V2H1a1 1 0 1 1 0-2h12a1 1 0 0 1 1 1Zm-.616 3.18a.517.517 0 0 0-.768 0l-2.5 3A.499.499 0 0 0 10.5 8h5a.5.5 0 0 0 .384-.82l-2.5-3ZM15.5 10h-5a.5.5 0 0 0-.384.82l2.5 3a.499.499 0 0 0 .768 0l2.5-3A.499.499 0 0 0 15.5 10Z" />
+                                        </svg>                                                                          
+                                    </button>
+                                    <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Bold" title="Bold">
+                                          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="10" height="14">
+                                            <path d="M8.443 6.242c.45-.649.724-1.442.724-2.304C9.167 1.767 7.484 0 5.417 0H1.25C.56 0 0 .587 0 1.313v11.374C0 13.413.56 14 1.25 14h4.583C8.131 14 10 12.037 10 9.625c0-1.37-.615-2.58-1.557-3.383ZM2.5 2.625h2.917c.689 0 1.25.589 1.25 1.313 0 .723-.561 1.312-1.25 1.312H2.5V2.625Zm3.333 8.75H2.5v-3.5h3.333c.92 0 1.667.785 1.667 1.75s-.747 1.75-1.667 1.75Z" />
+                                        </svg>                                               
+                                    </button>
+                                    <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Underline" title="Underline">
+                                        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="14" height="16">
+                                            <path d="M2 7c0 2.757 2.243 5 5 5s5-2.243 5-5V1a1 1 0 1 0-2 0v6c0 1.654-1.346 3-3 3S4 8.654 4 7V1a1 1 0 1 0-2 0v6Zm-2 8a1 1 0 0 0 1 1h12a1 1 0 1 0 0-2H1a1 1 0 0 0-1 1Z" />
+                                        </svg>                        
+                                    </button>
+                                    <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Italic" title="Italic">
+                                        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="8" height="14">
+                                            <path d="M7.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM3.75 4.648a1.002 1.002 0 0 1 1.287-.584h.001c.518.194.778.77.585 1.287l-3.006 8a1.004 1.004 0 0 1-1.289.585 1.001 1.001 0 0 1-.585-1.288l3.006-8Z" />
+                                        </svg>                                                                          
+                                    </button>
+                                </div>
+                                <!-- Center buttons -->
+                                <div class="flex sm:gap-1">
+                                    <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Align left" title="Align left">
+                                        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+                                            <path d="M1 2h14a1 1 0 0 0 0-2H1a1 1 0 0 0 0 2Zm0 4h6a1 1 0 0 0 0-2H1a1 1 0 0 0 0 2Zm0 4a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2H1Zm0 4h6a1 1 0 0 0 0-2H1a1 1 0 0 0 0 2Z" />
+                                        </svg>                                                                          
+                                    </button>
+                                    <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Align center" title="Align center">
+                                          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+                                            <path d="M1 2h14a1 1 0 0 0 0-2H1a1 1 0 0 0 0 2Zm4 4h6a1 1 0 0 0 0-2H5a1 1 0 0 0 0 2Zm10 4H1a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2ZM5 14h6a1 1 0 0 0 0-2H5a1 1 0 0 0 0 2Z" />
+                                        </svg>                                               
+                                    </button>
+                                    <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Align right" title="Align right">
+                                        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+                                            <path d="M1 2h14a1 1 0 1 0 0-2H1a1 1 0 1 0 0 2Zm8 4h6a1 1 0 1 0 0-2H9a1 1 0 1 0 0 2Zm-8 4a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2H1Zm8 4h6a1 1 0 1 0 0-2H9a1 1 0 1 0 0 2Z" />
+                                        </svg>                        
+                                    </button>
+                                </div>    
+                                <!-- Right actions -->
+                                <div class="flex-1 flex justify-end sm:gap-1">
+                                    <button class="flex justify-center items-center size-8 text-indigo-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Highlight" title="Highlight">
+                                        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                            <path d="M0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8Z" />
+                                        </svg>                                                                          
+                                    </button>
+                                    <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Add cite" title="Add cite">
+                                          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="14">
+                                            <path d="M2 7h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7.072C0 2.652 2.171.828 3.991.076a1.001 1.001 0 0 1 .764 1.848C2.918 2.684 2.017 4.344 2 7Zm9 0h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V7.072C9 2.653 11.171.828 12.991.076a1.001 1.001 0 0 1 .764 1.848C11.918 2.684 11.017 4.344 11 7Z" />
+                                        </svg>                                               
+                                    </button>
+                                    <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Add link" title="Add link">
+                                        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                            <path d="M9.444 6.832a1 1 0 0 0 1.263-.125l5-5A1 1 0 0 0 14.293.293l-5 5a1 1 0 0 0 .151 1.539Zm-6.96 2.437L.962 10.792l-.385-.898c-.058-.148-1.061-2.83.712-4.6l4.03-4.03C7.096-.512 9.773.49 9.886.534l.933.4-1.522 1.523-.163-.07s-1.558-.554-2.4.288l-4.03 4.03c-.851.851-.281 2.42-.275 2.435l.055.128Zm-2.04 6.563a1 1 0 0 0 1.263-.125l5-5a1 1 0 0 0-1.414-1.414l-5 5a1 1 0 0 0 .151 1.539Zm4.767-.797 1.523-1.522.128.055c.016.006 1.584.576 2.435-.275l4.03-4.03c.842-.842.288-2.4.288-2.4l-.07-.163 1.523-1.523.4.933c.044.113 1.046 2.794-.728 4.567l-4.03 4.03c-1.771 1.773-4.453.77-4.6.712l-.9-.384Z" />
+                                        </svg>                        
+                                    </button>
+                                </div>                                 
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Editor -->
+                    <div>
+                        <textarea class="w-full text-sm text-slate-600 placeholder:text-slate-400 px-3 sm:px-5 py-4 resize-none focus:outline-none" name="editor" id="editor" cols="30" rows="7" placeholder="Type here..."></textarea>
+                    </div>
+                    <!-- Footer -->
+                    <footer>
+                        <div class="h-12 border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]">
+                            <div class="h-full flex justify-between items-center sm:gap-1 overflow-x-scroll [scrollbar-width:none] px-3">
+                                <!-- Left actions -->
+                                <div class="flex items-center">
+                                    <!-- Delete button -->
+                                    <div class="pr-5 relative flex items-center after:absolute after:right-2.5 after:h-6 after:w-px after:bg-slate-200">
+                                        <button class="flex justify-center items-center size-8 text-red-400 hover:text-red-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Delete" title="Delete">
+                                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                                <path d="M15 3h-4V1a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v2H1a1 1 0 0 0 0 2h14a1 1 0 1 0 0-2ZM7 2h2v1H7V2Zm-.5 5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-5a.5.5 0 0 1 .5-.5h1Zm4 0a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-5a.5.5 0 0 1 .5-.5h1ZM3 14h10V6h2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6h2v8Z" />
+                                            </svg>                                                                          
+                                        </button>                                    
+                                    </div>
+                                    <!-- More buttons -->
+                                    <div class="flex sm:gap-1">
+                                        <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Add emoji" title="Add emoji">
+                                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                                <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8Zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6ZM6 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm5-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
+                                            </svg>                                                                          
+                                        </button>
+                                        <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="Add external link" title="Add external link">
+                                              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                                                <path d="M11 0C9.7 0 8.4.5 7.5 1.5L6.3 2.6c-.4.4-.4 1 0 1.4.4.4 1 .4 1.4 0l1.2-1.2c1.1-1.1 3.1-1.1 4.2 0 .6.6.9 1.4.9 2.2 0 .8-.3 1.6-.9 2.1L12 8.3c-.4.4-.4 1 0 1.4.2.2.5.3.7.3.2 0 .5-.1.7-.3l1.2-1.2C15.5 7.6 16 6.3 16 5c0-1.3-.5-2.6-1.5-3.5C13.6.5 12.3 0 11 0ZM7.1 13.2c-1.1 1.1-3.1 1.1-4.2 0-.6-.6-.9-1.4-.9-2.2 0-.8.3-1.6.9-2.1L4 7.7c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0L1.5 7.5C.5 8.4 0 9.7 0 11c0 1.3.5 2.6 1.5 3.5.9 1 2.2 1.5 3.5 1.5 1.3 0 2.6-.5 3.5-1.5l1.2-1.2c.4-.4.4-1 0-1.4-.4-.4-1-.3-1.4.1l-1.2 1.2ZM5.198 9.4l4.2-4.2c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-4.2 4.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4Z" />
+                                            </svg>                                               
+                                        </button>
+                                        <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="New row" title="New row">
+                                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="12" height="16">
+                                                <path d="M11.71 9.293a1 1 0 0 0-1.414 0l-3.293 3.293V1a1 1 0 0 0-2 0v11.586L1.71 9.293a1 1 0 0 0-1.414 1.414l5 5a1 1 0 0 0 1.414 0l5-5a1 1 0 0 0 0-1.414Z" />
+                                            </svg>                        
+                                        </button>
+                                        <button class="flex justify-center items-center size-8 text-slate-400 hover:text-slate-500 hover:bg-slate-100 rounded focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300" aria-label="More actions" title="More actions">
+                                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="16" height="4">
+                                                <path d="M2 4a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm6 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm8-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+                                            </svg>                                                                          
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Right actions -->
+                                <div>
+                                    <button class="inline-flex items-center justify-center whitespace-nowrap rounded-lg h-8 px-2 text-sm font-medium text-indigo-500 hover:text-white hover:bg-indigo-500 focus-visible:text-white focus-visible:bg-indigo-500 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors">
+                                        Send                                                                        
+                                    </button>
+                                </div>                                 
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Page footer -->
+    <footer class="absolute left-6 right-6 md:left-12 md:right-auto bottom-4 md:bottom-8 text-center md:text-left">
+        <a class="text-xs text-slate-500 hover:underline" href="https://cruip.com">&copy;Cruip - Tailwind CSS
+            templates</a>
+    </footer>
+
+    <!-- Banner with links -->
+    <div class="fixed bottom-0 right-0 w-full md:bottom-6 md:right-12 md:w-auto z-50"
+        :class="bannerOpen ? '' : 'hidden'" x-data="{ bannerOpen: true }">
+        <div class="bg-slate-800 text-sm p-3 md:rounded shadow flex justify-between">
+            <div class="text-slate-500 inline-flex">
+                <a class="font-medium hover:underline text-slate-300"
+                    href="https://cruip.com/build-a-wysiwyg-editor-with-tailwind-css/">
+                    Read Tutorial
+                </a>
+                <span class="italic px-1.5">or</span>
+                <a class="font-medium hover:underline text-indigo-500 flex items-center"
+                    href="https://github.com/cruip/cruip-tutorials/blob/main/wysiwyg-editor/index.html" target="_blank"
+                    rel="noreferrer">
+                    <span>Download</span>
+                    <svg class="fill-indigo-400 ml-1" xmlns="http://www.w3.org/2000/svg" width="9" height="9">
+                        <path d="m1.649 8.514-.91-.915 5.514-5.523H2.027l.01-1.258h6.388v6.394H7.158l.01-4.226z" />
+                    </svg>
+                </a>
+            </div>
+            <button class="text-slate-500 hover:text-slate-400 pl-2 ml-3 border-l border-slate-700"
+                @click="bannerOpen = false">
+                <span class="sr-only">Close</span>
+                <svg class="w-4 h-4 shrink-0 fill-current" viewBox="0 0 16 16">
+                    <path
+                        d="M12.72 3.293a1 1 0 00-1.415 0L8.012 6.586 4.72 3.293a1 1 0 00-1.414 1.414L6.598 8l-3.293 3.293a1 1 0 101.414 1.414l3.293-3.293 3.293 3.293a1 1 0 001.414-1.414L9.426 8l3.293-3.293a1 1 0 000-1.414z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>
