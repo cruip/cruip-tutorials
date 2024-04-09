@@ -41,6 +41,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Auto-Growing Textarea with Tailwind CSS](https://cruip.com/auto-growing-textarea-with-tailwind-css/)
 - [Animated Gradient Borders with Tailwind CSS](https://cruip.com/animated-gradient-borders-with-tailwind-css/)
 - [Build a WYSIWYG Editor with Tailwind CSS](https://cruip.com/build-a-wysiwyg-editor-with-tailwind-css/)
+- [Create a Table with a Sticky Column using Tailwind CSS](https://cruip.com/create-a-table-with-a-sticky-column-using-tailwind-css/)
 
 ## Terms of use
 
