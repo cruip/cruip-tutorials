@@ -43,6 +43,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Build a WYSIWYG Editor with Tailwind CSS](https://cruip.com/build-a-wysiwyg-editor-with-tailwind-css/)
 - [Create a Table with a Sticky Column using Tailwind CSS](https://cruip.com/create-a-table-with-a-sticky-column-using-tailwind-css/)
 - [Button Shine Effect on Hover with Tailwind CSS](https://cruip.com/button-shine-effect-on-hover-with-tailwind-css/)
+- [Masonry Layouts with Tailwind CSS](https://cruip.com/masonry-layouts-with-tailwind-css/)
 
 ## Terms of use
 
