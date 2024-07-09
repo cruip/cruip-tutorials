@@ -45,6 +45,7 @@ If you're new to our articles, we recommend taking a look here: [Tailwind CSS Tu
 - [Button Shine Effect on Hover with Tailwind CSS](https://cruip.com/button-shine-effect-on-hover-with-tailwind-css/)
 - [Masonry Layouts with Tailwind CSS](https://cruip.com/masonry-layouts-with-tailwind-css/)
 - [Create an Image Accordion with Tailwind](https://cruip.com/create-an-image-accordion-with-tailwind/)
+- [Linear, Radial and Conic Gradients with Tailwind CSS](https://cruip.com/linear-radial-and-conic-gradients-with-tailwind-css/)
 
 ## Terms of use
 
